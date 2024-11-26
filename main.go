@@ -4,10 +4,10 @@ import (
 	"flag"
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/plugin"
-	"github.com/viettelcloud-provider/terraform-provider-viettelidc/viettelidc"
+	vopencloud "github.com/viettelcloud-provider/terraform-provider-vopencloud/vopencloud"
 )
 
-const providerAddr = "registry.terraform.io/viettelcloud-provider/viettelidc"
+const providerAddr = "registry.terraform.io/viettelcloud-provider/vopencloud"
 
 func main() {
 	// added debugMode to enable debugging for provider per https://www.terraform.io/plugin/sdkv2/debugging
@@ -18,6 +18,6 @@ func main() {
 	plugin.Serve(&plugin.ServeOpts{
 		Debug:        debugMode,
 		ProviderAddr: providerAddr,
-		ProviderFunc: viettelidc.Provider,
+		ProviderFunc: vopencloud.Provider,
 	})
 }
