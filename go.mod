@@ -1,4 +1,4 @@
-module github.com/viettelcloud-provider/terraform-provider-viettelidc
+module github.com/viettelcloud-provider/terraform-provider-vopencloud
 
 go 1.21.5
 
