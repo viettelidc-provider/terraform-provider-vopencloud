@@ -1,13 +1,13 @@
 ---
 subcategory: "Databases / Trove"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_db_configuration_v1"
+page_title: "ViettelIdc: vopencloud_db_configuration_v1"
 sidebar_current: "docs-openstack-resource-db-configuration-v1"
 description: |-
   Manages a V1 DB configuration resource within ViettelIdc.
 ---
 
-# viettelidc\_db\_configuration\_v1
+# vopencloud\_db\_configuration\_v1
 
 Manages a V1 DB configuration resource within ViettelIdc.
 
@@ -16,7 +16,7 @@ Manages a V1 DB configuration resource within ViettelIdc.
 ### Configuration
 
 ```hcl
-resource "viettelidc_db_configuration_v1" "test" {
+resource "vopencloud_db_configuration_v1" "test" {
   name        = "test"
   description = "description"
 

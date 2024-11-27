@@ -1,13 +1,13 @@
 ---
 subcategory: "Identity / Keystone"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_identity_endpoint_v3"
+page_title: "ViettelIdc: vopencloud_identity_endpoint_v3"
 sidebar_current: "docs-openstack-datasource-identity-endpoint-v3"
 description: |-
   Get information on an ViettelIdc Endpoint.
 ---
 
-# viettelidc\_identity\_endpoint\_v3
+# vopencloud\_identity\_endpoint\_v3
 
 Use this data source to get the ID of an ViettelIdc endpoint.
 
@@ -16,7 +16,7 @@ Use this data source to get the ID of an ViettelIdc endpoint.
 ## Example Usage
 
 ```hcl
-data "viettelidc_identity_endpoint_v3" "endpoint_1" {
+data "vopencloud_identity_endpoint_v3" "endpoint_1" {
   service_name = "demo"
 }
 ```

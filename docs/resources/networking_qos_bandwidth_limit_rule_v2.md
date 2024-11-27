@@ -1,13 +1,13 @@
 ---
 subcategory: "Networking / Neutron"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_networking_qos_bandwidth_limit_rule_v2"
+page_title: "ViettelIdc: vopencloud_networking_qos_bandwidth_limit_rule_v2"
 sidebar_current: "docs-openstack-resource-networking-qos-bandwidth-limit-rule-v2"
 description: |-
   Manages a V2 Neutron QoS bandwidth limit rule resource within ViettelIdc.
 ---
 
-# viettelidc\_networking\_qos\_bandwidth\_limit\_rule\_v2
+# vopencloud\_networking\_qos\_bandwidth\_limit\_rule\_v2
 
 Manages a V2 Neutron QoS bandwidth limit rule resource within ViettelIdc.
 
@@ -16,13 +16,13 @@ Manages a V2 Neutron QoS bandwidth limit rule resource within ViettelIdc.
 ### Create a QoS Policy with some bandwidth limit rule
 
 ```hcl
-resource "viettelidc_networking_qos_policy_v2" "qos_policy_1" {
+resource "vopencloud_networking_qos_policy_v2" "qos_policy_1" {
   name        = "qos_policy_1"
   description = "bw_limit"
 }
 
-resource "viettelidc_networking_qos_bandwidth_limit_rule_v2" "bw_limit_rule_1" {
-  qos_policy_id  = viettelidc_networking_qos_policy_v2.qos_policy_1.id
+resource "vopencloud_networking_qos_bandwidth_limit_rule_v2" "bw_limit_rule_1" {
+  qos_policy_id  = vopencloud_networking_qos_policy_v2.qos_policy_1.id
   max_kbps       = 3000
   max_burst_kbps = 300
   direction      = "egress"
@@ -63,5 +63,5 @@ The following attributes are exported:
 QoS bandwidth limit rules can be imported using the `qos_policy_id/bandwidth_limit_rule` format, e.g.
 
 ```
-$ terraform import viettelidc_networking_qos_bandwidth_limit_rule_v2.bw_limit_rule_1 d6ae28ce-fcb5-4180-aa62-d260a27e09ae/46dfb556-b92f-48ce-94c5-9a9e2140de94
+$ terraform import vopencloud_networking_qos_bandwidth_limit_rule_v2.bw_limit_rule_1 d6ae28ce-fcb5-4180-aa62-d260a27e09ae/46dfb556-b92f-48ce-94c5-9a9e2140de94
 ```

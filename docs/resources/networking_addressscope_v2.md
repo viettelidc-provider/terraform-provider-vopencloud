@@ -1,13 +1,13 @@
 ---
 subcategory: "Networking / Neutron"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_networking_addressscope_v2"
+page_title: "ViettelIdc: vopencloud_networking_addressscope_v2"
 sidebar_current: "docs-openstack-resource-networking-addressscope-v2"
 description: |-
   Manages a V2 Neutron addressscope resource within ViettelIdc.
 ---
 
-# viettelidc\_networking\_addressscope\_v2
+# vopencloud\_networking\_addressscope\_v2
 
 Manages a V2 Neutron addressscope resource within ViettelIdc.
 
@@ -16,7 +16,7 @@ Manages a V2 Neutron addressscope resource within ViettelIdc.
 ### Create an Address-scope
 
 ```hcl
-resource "viettelidc_networking_addressscope_v2" "addressscope_1" {
+resource "vopencloud_networking_addressscope_v2" "addressscope_1" {
   name       = "addressscope_1"
   ip_version = 6
 }
@@ -25,15 +25,15 @@ resource "viettelidc_networking_addressscope_v2" "addressscope_1" {
 ### Create a Subnet Pool from an Address-scope
 
 ```hcl
-resource "viettelidc_networking_addressscope_v2" "addressscope_1" {
+resource "vopencloud_networking_addressscope_v2" "addressscope_1" {
   name       = "addressscope_1"
   ip_version = 6
 }
 
-resource "viettelidc_networking_subnetpool_v2" "subnetpool_1" {
+resource "vopencloud_networking_subnetpool_v2" "subnetpool_1" {
   name             = "subnetpool_1"
   prefixes         = ["fdf7:b13d:dead:beef::/64", "fd65:86cc:a334:39b7::/64"]
-  address_scope_id = viettelidc_networking_addressscope_v2.addressscope_1.id
+  address_scope_id = vopencloud_networking_addressscope_v2.addressscope_1.id
 }
 ```
 
@@ -75,5 +75,5 @@ The following attributes are exported:
 Address-scopes can be imported using the `id`, e.g.
 
 ```
-$ terraform import viettelidc_networking_addressscope_v2.addressscope_1 9cc35860-522a-4d35-974d-51d4b011801e
+$ terraform import vopencloud_networking_addressscope_v2.addressscope_1 9cc35860-522a-4d35-974d-51d4b011801e
 ```

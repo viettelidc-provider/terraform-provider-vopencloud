@@ -1,13 +1,13 @@
 ---
 subcategory: "Databases / Trove"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_db_user_v1"
+page_title: "ViettelIdc: vopencloud_db_user_v1"
 sidebar_current: "docs-openstack-resource-db-user-v1"
 description: |-
   Manages a V1 database user resource within ViettelIdc.
 ---
 
-# viettelidc\_db\_user\_v1
+# vopencloud\_db\_user\_v1
 
 Manages a V1 DB user resource within ViettelIdc.
 
@@ -20,9 +20,9 @@ state](https://www.terraform.io/docs/language/state/sensitive-data.html).
 ### User
 
 ```hcl
-resource "viettelidc_db_user_v1" "basic" {
+resource "vopencloud_db_user_v1" "basic" {
   name         = "basic"
-  instance_id  = viettelidc_db_instance_v1.basic.id
+  instance_id  = vopencloud_db_instance_v1.basic.id
   password     = "password"
   databases    = ["testdb"]
 }

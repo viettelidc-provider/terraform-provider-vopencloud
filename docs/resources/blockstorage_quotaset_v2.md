@@ -1,13 +1,13 @@
 ---
 subcategory: "Deprecated"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_blockstorage_quotaset_v2"
+page_title: "ViettelIdc: vopencloud_blockstorage_quotaset_v2"
 sidebar_current: "docs-openstack-resource-blockstorage-quotaset-v2"
 description: |-
   Manages a V2 quotaset resource within ViettelIdc.
 ---
 
-# viettelidc\_blockstorage\_quotaset\_v2
+# vopencloud\_blockstorage\_quotaset\_v2
 
 Manages a V2 block storage quotaset resource within ViettelIdc.
 
@@ -22,12 +22,12 @@ Manages a V2 block storage quotaset resource within ViettelIdc.
 ## Example Usage
 
 ```hcl
-resource "viettelidc_identity_project_v3" "project_1" {
+resource "vopencloud_identity_project_v3" "project_1" {
   name = project_1
 }
 
-resource "viettelidc_blockstorage_quotaset_v2" "quotaset_1" {
-  project_id           = viettelidc_identity_project_v3.project_1.id
+resource "vopencloud_blockstorage_quotaset_v2" "quotaset_1" {
+  project_id           = vopencloud_identity_project_v3.project_1.id
   volumes              = 10
   snapshots            = 4
   gigabytes            = 100
@@ -99,5 +99,5 @@ The following attributes are exported:
 Quotasets can be imported using the `project_id/region`, e.g.
 
 ```
-$ terraform import viettelidc_blockstorage_quotaset_v2.quotaset_1 2a0f2240-c5e6-41de-896d-e80d97428d6b/region_1
+$ terraform import vopencloud_blockstorage_quotaset_v2.quotaset_1 2a0f2240-c5e6-41de-896d-e80d97428d6b/region_1
 ```

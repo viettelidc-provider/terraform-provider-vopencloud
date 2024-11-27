@@ -1,20 +1,20 @@
 ---
 subcategory: "Compute / Nova"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_compute_keypair_v2"
+page_title: "ViettelIdc: vopencloud_compute_keypair_v2"
 sidebar_current: "docs-openstack-datasource-compute-keypair-v2"
 description: |-
   Get information on an ViettelIdc Keypair.
 ---
 
-# viettelidc\_compute\_keypair\_v2
+# vopencloud\_compute\_keypair\_v2
 
 Use this data source to get the ID and public key of an ViettelIdc keypair.
 
 ## Example Usage
 
 ```hcl
-data "viettelidc_compute_keypair_v2" "kp" {
+data "vopencloud_compute_keypair_v2" "kp" {
   name = "sand"
 }
 ```

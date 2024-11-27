@@ -1,20 +1,20 @@
 ---
 subcategory: "Identity / Keystone"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_identity_user_v3"
+page_title: "ViettelIdc: vopencloud_identity_user_v3"
 sidebar_current: "docs-openstack-datasource-identity-user-v3"
 description: |-
   Get information on an ViettelIdc User.
 ---
 
-# viettelidc\_identity\_user\_v3
+# vopencloud\_identity\_user\_v3
 
 Use this data source to get the ID of an ViettelIdc user.
 
 ## Example Usage
 
 ```hcl
-data "viettelidc_identity_user_v3" "user_1" {
+data "vopencloud_identity_user_v3" "user_1" {
   name = "user_1"
 }
 ```

@@ -1,20 +1,20 @@
 ---
 subcategory: "Identity / Keystone"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_identity_role_v3"
+page_title: "ViettelIdc: vopencloud_identity_role_v3"
 sidebar_current: "docs-openstack-datasource-identity-role-v3"
 description: |-
   Get information on an ViettelIdc Role.
 ---
 
-# viettelidc\_identity\_role\_v3
+# vopencloud\_identity\_role\_v3
 
 Use this data source to get the ID of an ViettelIdc role.
 
 ## Example Usage
 
 ```hcl
-data "viettelidc_identity_role_v3" "admin" {
+data "vopencloud_identity_role_v3" "admin" {
   name = "admin"
 }
 ```

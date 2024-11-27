@@ -1,13 +1,13 @@
 ---
 subcategory: "Networking / Neutron"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_networking_port_secgroup_associate_v2"
+page_title: "ViettelIdc: vopencloud_networking_port_secgroup_associate_v2"
 sidebar_current: "docs-openstack-resource-networking-port-secgroup-associate-v2"
 description: |-
   Manages a V2 port's security groups within ViettelIdc.
 ---
 
-# viettelidc\_networking\_port\_secgroup\_associate\_v2
+# vopencloud\_networking\_port\_secgroup\_associate\_v2
 
 Manages a V2 port's security groups within ViettelIdc. Useful, when the port was
 created not by Terraform (e.g. Manila or LBaaS). It should not be used, when the
@@ -23,18 +23,18 @@ IDs.
 ### Append a security group to an existing port
 
 ```hcl
-data "viettelidc_networking_port_v2" "system_port" {
+data "vopencloud_networking_port_v2" "system_port" {
   fixed_ip = "10.0.0.10"
 }
 
-data "viettelidc_networking_secgroup_v2" "secgroup" {
+data "vopencloud_networking_secgroup_v2" "secgroup" {
   name = "secgroup"
 }
 
-resource "viettelidc_networking_port_secgroup_associate_v2" "port_1" {
-  port_id = data.viettelidc_networking_port_v2.system_port.id
+resource "vopencloud_networking_port_secgroup_associate_v2" "port_1" {
+  port_id = data.vopencloud_networking_port_v2.system_port.id
   security_group_ids = [
-    data.viettelidc_networking_secgroup_v2.secgroup.id,
+    data.vopencloud_networking_secgroup_v2.secgroup.id,
   ]
 }
 ```
@@ -42,19 +42,19 @@ resource "viettelidc_networking_port_secgroup_associate_v2" "port_1" {
 ### Enforce a security group to an existing port
 
 ```hcl
-data "viettelidc_networking_port_v2" "system_port" {
+data "vopencloud_networking_port_v2" "system_port" {
   fixed_ip = "10.0.0.10"
 }
 
-data "viettelidc_networking_secgroup_v2" "secgroup" {
+data "vopencloud_networking_secgroup_v2" "secgroup" {
   name = "secgroup"
 }
 
-resource "viettelidc_networking_port_secgroup_associate_v2" "port_1" {
-  port_id = data.viettelidc_networking_port_v2.system_port.id
+resource "vopencloud_networking_port_secgroup_associate_v2" "port_1" {
+  port_id = data.vopencloud_networking_port_v2.system_port.id
   enforce = "true"
   security_group_ids = [
-    data.viettelidc_networking_secgroup_v2.secgroup.id,
+    data.vopencloud_networking_secgroup_v2.secgroup.id,
   ]
 }
 ```
@@ -62,12 +62,12 @@ resource "viettelidc_networking_port_secgroup_associate_v2" "port_1" {
 ### Remove all security groups from an existing port
 
 ```hcl
-data "viettelidc_networking_port_v2" "system_port" {
+data "vopencloud_networking_port_v2" "system_port" {
   fixed_ip = "10.0.0.10"
 }
 
-resource "viettelidc_networking_port_secgroup_associate_v2" "port_1" {
-  port_id            = data.viettelidc_networking_port_v2.system_port.id
+resource "vopencloud_networking_port_secgroup_associate_v2" "port_1" {
+  port_id            = data.vopencloud_networking_port_v2.system_port.id
   enforce            = "true"
   security_group_ids = []
 }
@@ -106,5 +106,5 @@ The following attributes are exported:
 Port security group association can be imported using the `id` of the port, e.g.
 
 ```
-$ terraform import viettelidc_networking_port_secgroup_associate_v2.port_1 eae26a3e-1c33-4cc1-9c31-0cd729c438a1
+$ terraform import vopencloud_networking_port_secgroup_associate_v2.port_1 eae26a3e-1c33-4cc1-9c31-0cd729c438a1
 ```

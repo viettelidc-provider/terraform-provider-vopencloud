@@ -1,20 +1,20 @@
 ---
 subcategory: "FWaaS / Neutron"
 layout: "openstack"
-page_title: "OpenStack: viettelidc_fw_group_v2"
+page_title: "OpenStack: vopencloud_fw_group_v2"
 sidebar_current: "docs-openstack-datasource-fw-group-v2"
 description: |-
   Get information on an OpenStack Firewall Group V2.
 ---
 
-# viettelidc\_fw\_group\_v2
+# vopencloud\_fw\_group\_v2
 
 Use this data source to get information of an available OpenStack firewall group v2.
 
 ## Example Usage
 
 ```hcl
-data "viettelidc_fw_group_v2" "group" {
+data "vopencloud_fw_group_v2" "group" {
   name = "tf_test_group"
 }
 ```

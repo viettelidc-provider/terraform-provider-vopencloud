@@ -1,13 +1,13 @@
 ---
 subcategory: "Compute / Nova"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_compute_aggregate_v2"
+page_title: "ViettelIdc: vopencloud_compute_aggregate_v2"
 sidebar_current: "docs-openstack-datasource-compute-aggregate-v2"
 description: |-
   Get information on Openstack Host Aggregate
 ---
 
-# viettelidc\_compute\_aggregate\_v2
+# vopencloud\_compute\_aggregate\_v2
 
 Use this data source to get information about host aggregates
 by name.
@@ -15,7 +15,7 @@ by name.
 ## Example Usage
 
 ```hcl
-data "viettelidc_compute_aggregate_v2" "test" {
+data "vopencloud_compute_aggregate_v2" "test" {
   name = "test"
 }
 ```

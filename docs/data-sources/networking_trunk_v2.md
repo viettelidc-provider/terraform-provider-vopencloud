@@ -1,20 +1,20 @@
 ---
 subcategory: "Networking / Neutron"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_networking_trunk_v2"
+page_title: "ViettelIdc: vopencloud_networking_trunk_v2"
 sidebar_current: "docs-openstack-datasource-networking-trunk-v2"
 description: |-
   Get information of an ViettelIdc Trunk.
 ---
 
-# viettelidc\_networking\_trunk\_v2
+# vopencloud\_networking\_trunk\_v2
 
 Use this data source to get the ID of an available ViettelIdc trunk.
 
 ## Example Usage
 
 ```hcl
-data "viettelidc_networking_trunk_v2" "trunk_1" {
+data "vopencloud_networking_trunk_v2" "trunk_1" {
   name = "trunk_1"
 }
 ```

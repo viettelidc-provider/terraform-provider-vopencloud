@@ -1,13 +1,13 @@
 ---
 subcategory: "Images / Glance"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_images_image_access_v2"
+page_title: "ViettelIdc: vopencloud_images_image_access_v2"
 sidebar_current: "docs-openstack-resource-images-image-access-v2"
 description: |-
   Manages a V2 Image member resource within ViettelIdc Glance.
 ---
 
-# viettelidc\_images\_image\_access\_v2
+# vopencloud\_images\_image\_access\_v2
 
 Manages members for the shared ViettelIdc Glance V2 Image within the source
 project, which owns the Image.
@@ -20,7 +20,7 @@ Create a shared image and propose a membership to the
 `bed6b6cbb86a4e2d8dc2735c2f1000e4` project ID.
 
 ```hcl
-resource "viettelidc_images_image_v2" "rancheros" {
+resource "vopencloud_images_image_v2" "rancheros" {
   name             = "RancherOS"
   image_source_url = "https://releases.rancher.com/os/latest/rancheros-openstack.img"
   container_format = "bare"
@@ -32,8 +32,8 @@ resource "viettelidc_images_image_v2" "rancheros" {
   }
 }
 
-resource "viettelidc_images_image_access_v2" "rancheros_member" {
-  image_id  = viettelidc_images_image_v2.rancheros.id
+resource "vopencloud_images_image_access_v2" "rancheros_member" {
+  image_id  = vopencloud_images_image_v2.rancheros.id
   member_id = "bed6b6cbb86a4e2d8dc2735c2f1000e4"
 }
 ```
@@ -44,7 +44,7 @@ Create a shared image and set a membership to the
 `bed6b6cbb86a4e2d8dc2735c2f1000e4` project ID.
 
 ```hcl
-resource "viettelidc_images_image_v2" "rancheros" {
+resource "vopencloud_images_image_v2" "rancheros" {
   name             = "RancherOS"
   image_source_url = "https://releases.rancher.com/os/latest/rancheros-openstack.img"
   container_format = "bare"
@@ -56,8 +56,8 @@ resource "viettelidc_images_image_v2" "rancheros" {
   }
 }
 
-resource "viettelidc_images_image_access_v2" "rancheros_member" {
-  image_id  = viettelidc_images_image_v2.rancheros.id
+resource "vopencloud_images_image_access_v2" "rancheros_member" {
+  image_id  = vopencloud_images_image_v2.rancheros.id
   member_id = "bed6b6cbb86a4e2d8dc2735c2f1000e4"
   status    = "accepted"
 }
@@ -93,5 +93,5 @@ Image access can be imported using the `image_id` and the `member_id`,
 separated by a slash, e.g.
 
 ```
-$ terraform import viettelidc_images_image_access_v2 89c60255-9bd6-460c-822a-e2b959ede9d2/bed6b6cbb86a4e2d8dc2735c2f1000e4
+$ terraform import vopencloud_images_image_access_v2 89c60255-9bd6-460c-822a-e2b959ede9d2/bed6b6cbb86a4e2d8dc2735c2f1000e4
 ```

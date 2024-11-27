@@ -1,38 +1,38 @@
 ---
 subcategory: "Networking / Neutron"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_networking_router_interface_v2"
+page_title: "ViettelIdc: vopencloud_networking_router_interface_v2"
 sidebar_current: "docs-openstack-resource-networking-router-interface-v2"
 description: |-
   Manages a V2 router interface resource within ViettelIdc.
 ---
 
-# viettelidc\_networking\_router\_interface\_v2
+# vopencloud\_networking\_router\_interface\_v2
 
 Manages a V2 router interface resource within ViettelIdc.
 
 ## Example Usage
 
 ```hcl
-resource "viettelidc_networking_network_v2" "network_1" {
+resource "vopencloud_networking_network_v2" "network_1" {
   name           = "tf_test_network"
   admin_state_up = "true"
 }
 
-resource "viettelidc_networking_subnet_v2" "subnet_1" {
-  network_id = viettelidc_networking_network_v2.network_1.id
+resource "vopencloud_networking_subnet_v2" "subnet_1" {
+  network_id = vopencloud_networking_network_v2.network_1.id
   cidr       = "192.168.199.0/24"
   ip_version = 4
 }
 
-resource "viettelidc_networking_router_v2" "router_1" {
+resource "vopencloud_networking_router_v2" "router_1" {
   name                = "my_router"
   external_network_id = "f67f0d72-0ddf-11e4-9d95-e1f29f417e2f"
 }
 
-resource "viettelidc_networking_router_interface_v2" "router_interface_1" {
-  router_id = viettelidc_networking_router_v2.router_1.id
-  subnet_id = viettelidc_networking_subnet_v2.subnet_1.id
+resource "vopencloud_networking_router_interface_v2" "router_interface_1" {
+  router_id = vopencloud_networking_router_v2.router_1.id
+  subnet_id = vopencloud_networking_subnet_v2.subnet_1.id
 }
 ```
 
@@ -73,5 +73,5 @@ Router Interfaces can be imported using the port `id`, e.g.
 
 ```
 $ openstack port list --router <router name or id>
-$ terraform import viettelidc_networking_router_interface_v2.int_1 port_id
+$ terraform import vopencloud_networking_router_interface_v2.int_1 port_id
 ```

@@ -1,13 +1,13 @@
 ---
 subcategory: "Load Balancing as a Service / Octavia"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_lb_pool_v2"
+page_title: "ViettelIdc: vopencloud_lb_pool_v2"
 sidebar_current: "docs-openstack-resource-lb-pool-v2"
 description: |-
   Manages a V2 pool resource within ViettelIdc.
 ---
 
-# viettelidc\_lb\_pool\_v2
+# vopencloud\_lb\_pool\_v2
 
 Manages a V2 pool resource within ViettelIdc.
 
@@ -17,7 +17,7 @@ Please ensure your Openstack cloud supports the required [minor version](../#oct
 ## Example Usage
 
 ```hcl
-resource "viettelidc_lb_pool_v2" "pool_1" {
+resource "vopencloud_lb_pool_v2" "pool_1" {
   protocol    = "HTTP"
   lb_method   = "ROUND_ROBIN"
   listener_id = "d9415786-5f1a-428b-b35f-2f1523e146d2"
@@ -96,5 +96,5 @@ The following attributes are exported:
 Load Balancer Pool can be imported using the Pool ID, e.g.:
 
 ```
-$ terraform import viettelidc_lb_pool_v2.pool_1 60ad9ee4-249a-4d60-a45b-aa60e046c513
+$ terraform import vopencloud_lb_pool_v2.pool_1 60ad9ee4-249a-4d60-a45b-aa60e046c513
 ```

@@ -1,26 +1,26 @@
 ---
 subcategory: "Networking / Neutron"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_networking_subnet_v2"
+page_title: "ViettelIdc: vopencloud_networking_subnet_v2"
 sidebar_current: "docs-openstack-resource-networking-subnet-v2"
 description: |-
   Manages a V2 Neutron subnet resource within ViettelIdc.
 ---
 
-# viettelidc\_networking\_subnet\_v2
+# vopencloud\_networking\_subnet\_v2
 
 Manages a V2 Neutron subnet resource within ViettelIdc.
 
 ## Example Usage
 
 ```hcl
-resource "viettelidc_networking_network_v2" "network_1" {
+resource "vopencloud_networking_network_v2" "network_1" {
   name           = "tf_test_network"
   admin_state_up = "true"
 }
 
-resource "viettelidc_networking_subnet_v2" "subnet_1" {
-  network_id = viettelidc_networking_network_v2.network_1.id
+resource "vopencloud_networking_subnet_v2" "subnet_1" {
+  network_id = vopencloud_networking_network_v2.network_1.id
   cidr       = "192.168.199.0/24"
 }
 ```
@@ -95,7 +95,7 @@ The following arguments are supported:
 * `service_types` - (Optional) An array of service types used by the subnet.
     Changing this updates the service types for the existing subnet.
 
-* `host_routes` - (**Deprecated** - use `viettelidc_networking_subnet_route_v2`
+* `host_routes` - (**Deprecated** - use `vopencloud_networking_subnet_route_v2`
     instead) An array of routes that should be used by devices
     with IPs from this subnet (not including local subnet route). The host_route
     object structure is documented below. Changing this updates the host routes
@@ -152,5 +152,5 @@ The following attributes are exported:
 Subnets can be imported using the `id`, e.g.
 
 ```
-$ terraform import viettelidc_networking_subnet_v2.subnet_1 da4faf16-5546-41e4-8330-4d0002b74048
+$ terraform import vopencloud_networking_subnet_v2.subnet_1 da4faf16-5546-41e4-8330-4d0002b74048
 ```

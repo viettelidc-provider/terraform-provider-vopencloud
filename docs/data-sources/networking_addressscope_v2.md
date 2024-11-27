@@ -1,20 +1,20 @@
 ---
 subcategory: "Networking / Neutron"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_networking_addressscope_v2"
+page_title: "ViettelIdc: vopencloud_networking_addressscope_v2"
 sidebar_current: "docs-openstack-datasource-networking-addressscope-v2"
 description: |-
   Get information on an ViettelIdc Address Scope.
 ---
 
-# viettelidc\_networking\_addressscope\_v2
+# vopencloud\_networking\_addressscope\_v2
 
 Use this data source to get the ID of an available ViettelIdc address-scope.
 
 ## Example Usage
 
 ```hcl
-data "viettelidc_networking_addressscope_v2" "public_addressscope" {
+data "vopencloud_networking_addressscope_v2" "public_addressscope" {
   name       = "public_addressscope"
   shared     = true
   ip_version = 4

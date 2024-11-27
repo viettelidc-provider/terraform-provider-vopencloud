@@ -1,26 +1,26 @@
 ---
 subcategory: "Compute / Nova"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_compute_secgroup_v2"
+page_title: "ViettelIdc: vopencloud_compute_secgroup_v2"
 sidebar_current: "docs-openstack-resource-compute-secgroup-v2"
 description: |-
   Manages a V2 security group resource within ViettelIdc.
 ---
 
-# viettelidc\_compute\_secgroup\_v2
+# vopencloud\_compute\_secgroup\_v2
 
 Manages a V2 security group resource within ViettelIdc.
 
 Please note that managing security groups through the ViettelIdc Compute API
 has been deprecated. Unless you are using an older ViettelIdc environment, it is
-recommended to use the [`viettelidc_networking_secgroup_v2`](networking_secgroup_v2.html)
-and [`viettelidc_networking_secgroup_rule_v2`](networking_secgroup_rule_v2.html)
+recommended to use the [`vopencloud_networking_secgroup_v2`](networking_secgroup_v2.html)
+and [`vopencloud_networking_secgroup_rule_v2`](networking_secgroup_rule_v2.html)
 resources instead, which uses the ViettelIdc Networking API.
 
 ## Example Usage
 
 ```hcl
-resource "viettelidc_compute_secgroup_v2" "secgroup_1" {
+resource "vopencloud_compute_secgroup_v2" "secgroup_1" {
   name        = "my_secgroup"
   description = "my security group"
 
@@ -115,12 +115,12 @@ A list of ICMP types and codes can be found [here](https://en.wikipedia.org/wiki
 When referencing a security group in a configuration (for example, a configuration creates a new security group and then needs to apply it to an instance being created in the same configuration), it is currently recommended to reference the security group by name and not by ID, like this:
 
 ```hcl
-resource "viettelidc_compute_instance_v2" "test-server" {
+resource "vopencloud_compute_instance_v2" "test-server" {
   name            = "tf-test"
   image_id        = "ad091b52-742f-469e-8f3c-fd81cadf0743"
   flavor_id       = "3"
   key_pair        = "my_key_pair_name"
-  security_groups = [viettelidc_compute_secgroup_v2.secgroup_1.name]
+  security_groups = [vopencloud_compute_secgroup_v2.secgroup_1.name]
 }
 ```
 
@@ -129,5 +129,5 @@ resource "viettelidc_compute_instance_v2" "test-server" {
 Security Groups can be imported using the `id`, e.g.
 
 ```
-$ terraform import viettelidc_compute_secgroup_v2.my_secgroup 1bc30ee9-9d5b-4c30-bdd5-7f1e663f5edf
+$ terraform import vopencloud_compute_secgroup_v2.my_secgroup 1bc30ee9-9d5b-4c30-bdd5-7f1e663f5edf
 ```

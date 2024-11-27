@@ -1,13 +1,13 @@
 ---
 subcategory: "Compute / Nova"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_compute_hypervisor_v2"
+page_title: "ViettelIdc: vopencloud_compute_hypervisor_v2"
 sidebar_current: "docs-openstack-datasource-compute-hypervisor-v2"
 description: |-
   Get information on Openstack Hypervisor
 ---
 
-# viettelidc\_compute\_hypervisor\_v2
+# vopencloud\_compute\_hypervisor\_v2
 
 Use this data source to get information about hypervisors
 by hostname.
@@ -15,7 +15,7 @@ by hostname.
 ## Example Usage
 
 ```hcl
-data "viettelidc_compute_hypervisor_v2" "host01" {
+data "vopencloud_compute_hypervisor_v2" "host01" {
   hostname = "host01"
 }
 ```

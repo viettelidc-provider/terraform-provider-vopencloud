@@ -1,20 +1,20 @@
 ---
 subcategory: "Networking / Neutron"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_networking_router_v2"
+page_title: "ViettelIdc: vopencloud_networking_router_v2"
 sidebar_current: "docs-openstack-resource-networking-router-v2"
 description: |-
   Manages a V2 router resource within ViettelIdc.
 ---
 
-# viettelidc\_networking\_router\_v2
+# vopencloud\_networking\_router\_v2
 
 Manages a V2 router resource within ViettelIdc.
 
 ## Example Usage
 
 ```hcl
-resource "viettelidc_networking_router_v2" "router_1" {
+resource "vopencloud_networking_router_v2" "router_1" {
   name                = "my_router"
   admin_state_up      = true
   external_network_id = "f67f0d72-0ddf-11e4-9d95-e1f29f417e2f"
@@ -122,5 +122,5 @@ The following attributes are exported:
 Routers can be imported using the `id`, e.g.
 
 ```
-$ terraform import viettelidc_networking_router_v2.router_1 014395cd-89fc-4c9b-96b7-13d1ee79dad2
+$ terraform import vopencloud_networking_router_v2.router_1 014395cd-89fc-4c9b-96b7-13d1ee79dad2
 ```

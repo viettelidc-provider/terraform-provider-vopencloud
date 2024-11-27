@@ -1,13 +1,13 @@
 ---
 subcategory: "Images / Glance"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_images_image_v2"
+page_title: "ViettelIdc: vopencloud_images_image_v2"
 sidebar_current: "docs-openstack-resource-images-image-v2"
 description: |-
   Manages a V2 Image resource within ViettelIdc Glance.
 ---
 
-# viettelidc\_images\_image\_v2
+# vopencloud\_images\_image\_v2
 
 Manages a V2 Image resource within ViettelIdc Glance.
 
@@ -18,7 +18,7 @@ state](https://www.terraform.io/docs/language/state/sensitive-data.html).
 ## Example Usage
 
 ```hcl
-resource "viettelidc_images_image_v2" "rancheros" {
+resource "vopencloud_images_image_v2" "rancheros" {
   name             = "RancherOS"
   image_source_url = "https://releases.rancher.com/os/latest/rancheros-openstack.img"
   container_format = "bare"
@@ -157,5 +157,5 @@ Image Service set it.
 Images can be imported using the `id`, e.g.
 
 ```
-$ terraform import viettelidc_images_image_v2.rancheros 89c60255-9bd6-460c-822a-e2b959ede9d2
+$ terraform import vopencloud_images_image_v2.rancheros 89c60255-9bd6-460c-822a-e2b959ede9d2
 ```

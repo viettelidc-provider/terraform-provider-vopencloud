@@ -1,13 +1,13 @@
 ---
 subcategory: "Images / Glance"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_images_image_ids_v2"
+page_title: "ViettelIdc: vopencloud_images_image_ids_v2"
 sidebar_current: "docs-openstack-datasource-images-image-ids-v2"
 description: |-
   Provides a list of Openstack Image IDs
 ---
 
-# viettelidc\_images\_image\_ids\_v2
+# vopencloud\_images\_image\_ids\_v2
 
 Use this data source to get a list of Openstack Image IDs matching the
 specified criteria.
@@ -15,7 +15,7 @@ specified criteria.
 ## Example Usage
 
 ```hcl
-data "viettelidc_images_image_ids_v2" "images" {
+data "vopencloud_images_image_ids_v2" "images" {
   name_regex = "^Ubuntu 16\\.04.*-amd64"
   sort       = "updated_at"
 

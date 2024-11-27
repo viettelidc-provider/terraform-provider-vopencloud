@@ -1,20 +1,20 @@
 ---
 subcategory: "Networking / Neutron"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_networking_secgroup_v2"
+page_title: "ViettelIdc: vopencloud_networking_secgroup_v2"
 sidebar_current: "docs-openstack-datasource-networking-secgroup-v2"
 description: |-
   Get information on an ViettelIdc Security Group.
 ---
 
-# viettelidc\_networking\_secgroup\_v2
+# vopencloud\_networking\_secgroup\_v2
 
 Use this data source to get the ID of an available ViettelIdc security group.
 
 ## Example Usage
 
 ```hcl
-data "viettelidc_networking_secgroup_v2" "secgroup" {
+data "vopencloud_networking_secgroup_v2" "secgroup" {
   name = "tf_test_secgroup"
 }
 ```

@@ -1,13 +1,13 @@
 ---
 subcategory: "Identity / Keystone"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_identity_endpoint_v3"
+page_title: "ViettelIdc: vopencloud_identity_endpoint_v3"
 sidebar_current: "docs-openstack-resource-identity-endpoint-v3"
 description: |-
   Manages a V3 Endpoint resource within ViettelIdc Keystone.
 ---
 
-# viettelidc\_identity\_endpoint\_v3
+# vopencloud\_identity\_endpoint\_v3
 
 Manages a V3 Endpoint resource within ViettelIdc Keystone.
 
@@ -16,15 +16,15 @@ Manages a V3 Endpoint resource within ViettelIdc Keystone.
 ## Example Usage
 
 ```hcl
-resource "viettelidc_identity_service_v3" "service_1" {
+resource "vopencloud_identity_service_v3" "service_1" {
   name = "my-service"
   type = "my-service-type"
 }
 
-resource "viettelidc_identity_endpoint_v3" "endpoint_1" {
+resource "vopencloud_identity_endpoint_v3" "endpoint_1" {
   name            = "my-endpoint"
-  service_id      = viettelidc_identity_service_v3.service_1.id
-  endpoint_region = viettelidc_identity_service_v3.service_1.region
+  service_id      = vopencloud_identity_service_v3.service_1.id
+  endpoint_region = vopencloud_identity_service_v3.service_1.region
   url             = "http://my-endpoint"
 }
 ```
@@ -67,5 +67,5 @@ exported:
 Endpoints can be imported using the `id`, e.g.
 
 ```
-$ terraform import viettelidc_identity_endpoint_v3.endpoint_1 5392472b-106a-4845-90c6-7c8445f18770
+$ terraform import vopencloud_identity_endpoint_v3.endpoint_1 5392472b-106a-4845-90c6-7c8445f18770
 ```

@@ -1,13 +1,13 @@
 ---
 subcategory: "Networking / Neutron"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_networking_qos_policy_v2"
+page_title: "ViettelIdc: vopencloud_networking_qos_policy_v2"
 sidebar_current: "docs-openstack-resource-networking-qos-policy-v2"
 description: |-
   Manages a V2 Neutron QoS policy resource within ViettelIdc.
 ---
 
-# viettelidc\_networking\_qos\_policy\_v2
+# vopencloud\_networking\_qos\_policy\_v2
 
 Manages a V2 Neutron QoS policy resource within ViettelIdc.
 
@@ -16,7 +16,7 @@ Manages a V2 Neutron QoS policy resource within ViettelIdc.
 ### Create a QoS Policy
 
 ```hcl
-resource "viettelidc_networking_qos_policy_v2" "qos_policy_1" {
+resource "vopencloud_networking_qos_policy_v2" "qos_policy_1" {
   name        = "qos_policy_1"
   description = "bw_limit"
 }
@@ -75,5 +75,5 @@ The following attributes are exported:
 QoS Policies can be imported using the `id`, e.g.
 
 ```
-$ terraform import viettelidc_networking_qos_policy_v2.qos_policy_1 d6ae28ce-fcb5-4180-aa62-d260a27e09ae
+$ terraform import vopencloud_networking_qos_policy_v2.qos_policy_1 d6ae28ce-fcb5-4180-aa62-d260a27e09ae
 ```

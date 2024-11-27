@@ -15,7 +15,7 @@ Building The Provider
 Clone the repository
 
 ```sh
-$ git clone git@github.com:viettelcloud-provider/terraform-provider-viettelidc.git
+$ git clone git@github.com:viettelcloud-provider/terraform-provider-vopencloud.git
 ```
 
 Enter the provider directory and build the provider
@@ -29,7 +29,7 @@ Using the provider
 ----------------------
 Please see the documentation at [registry.terraform.io](https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs).
 
-Or you can browse the documentation within this repo [here](https://github.com/viettelcloud-provider/terraform-provider-viettelidc/tree/main/website/docs).
+Or you can browse the documentation within this repo [here](https://github.com/viettelcloud-provider/terraform-provider-vopencloud/tree/main/website/docs).
 
 Developing the Provider
 ---------------------------

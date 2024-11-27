@@ -1,20 +1,20 @@
 ---
 subcategory: "Deprecated"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_blockstorage_snapshot_v2"
+page_title: "ViettelIdc: vopencloud_blockstorage_snapshot_v2"
 sidebar_current: "docs-openstack-datasource-blockstorage-snapshot-v2"
 description: |-
   Get information on an ViettelIdc Snapshot.
 ---
 
-# viettelidc\_blockstorage\_snapshot\_v2
+# vopencloud\_blockstorage\_snapshot\_v2
 
 Use this data source to get information about an existing snapshot.
 
 ## Example Usage
 
 ```hcl
-data "viettelidc_blockstorage_snapshot_v2" "snapshot_1" {
+data "vopencloud_blockstorage_snapshot_v2" "snapshot_1" {
   name        = "snapshot_1"
   most_recent = true
 }

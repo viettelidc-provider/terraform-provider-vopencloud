@@ -1,20 +1,20 @@
 ---
 subcategory: "Compute / Nova"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_compute_flavor_v2"
+page_title: "ViettelIdc: vopencloud_compute_flavor_v2"
 sidebar_current: "docs-openstack-resource-compute-flavor-v2"
 description: |-
   Manages a V2 flavor resource within ViettelIdc.
 ---
 
-# viettelidc\_compute\_flavor\_v2
+# vopencloud\_compute\_flavor\_v2
 
 Manages a V2 flavor resource within ViettelIdc.
 
 ## Example Usage
 
 ```hcl
-resource "viettelidc_compute_flavor_v2" "test-flavor" {
+resource "vopencloud_compute_flavor_v2" "test-flavor" {
   name  = "my-flavor"
   ram   = "8096"
   vcpus = "2"
@@ -89,5 +89,5 @@ The following attributes are exported:
 Flavors can be imported using the `ID`, e.g.
 
 ```
-$ terraform import viettelidc_compute_flavor_v2.my-flavor 4142e64b-1b35-44a0-9b1e-5affc7af1106
+$ terraform import vopencloud_compute_flavor_v2.my-flavor 4142e64b-1b35-44a0-9b1e-5affc7af1106
 ```
