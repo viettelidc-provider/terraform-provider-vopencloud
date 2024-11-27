@@ -1,20 +1,20 @@
 ---
 subcategory: "Networking / Neutron"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_networking_qos_bandwidth_limit_rule_v2"
+page_title: "ViettelIdc: vopencloud_networking_qos_bandwidth_limit_rule_v2"
 sidebar_current: "docs-openstack-datasource-networking-qos-bandwidth-limit-rule-v2"
 description: |-
   Get information on an ViettelIdc QoS Bandwidth limit rule.
 ---
 
-# viettelidc\_networking\_qos\_bandwidth\_limit\_rule\_v2
+# vopencloud\_networking\_qos\_bandwidth\_limit\_rule\_v2
 
 Use this data source to get the ID of an available ViettelIdc QoS bandwidth limit rule.
 
 ## Example Usage
 
 ```hcl
-data "viettelidc_networking_qos_bandwidth_limit_rule_v2" "qos_bandwidth_limit_rule_1" {
+data "vopencloud_networking_qos_bandwidth_limit_rule_v2" "qos_bandwidth_limit_rule_1" {
   max_kbps = 300
 }
 ```

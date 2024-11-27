@@ -1,13 +1,13 @@
 ---
 subcategory: "Networking / Neutron"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_networking_rbac_policy_v2"
+page_title: "ViettelIdc: vopencloud_networking_rbac_policy_v2"
 sidebar_current: "docs-openstack-resource-networking-rbac-policy-v2"
 description: |-
   Creates an RBAC policy for an ViettelIdc V2 resource.
 ---
 
-# viettelidc\_networking\_rbac\_policy\_v2
+# vopencloud\_networking\_rbac\_policy\_v2
 
 The RBAC policy resource contains functionality for working with Neutron RBAC
 Policies. Role-Based Access Control (RBAC) policy framework enables both
@@ -26,14 +26,14 @@ before this feature was added.
 ## Example Usage
 
 ```hcl
-resource "viettelidc_networking_network_v2" "network_1" {
+resource "vopencloud_networking_network_v2" "network_1" {
   name           = "network_1"
   admin_state_up = "true"
 }
 
-resource "viettelidc_networking_rbac_policy_v2" "rbac_policy_1" {
+resource "vopencloud_networking_rbac_policy_v2" "rbac_policy_1" {
   action        = "access_as_shared"
-  object_id     = viettelidc_networking_network_v2.network_1.id
+  object_id     = vopencloud_networking_network_v2.network_1.id
   object_type   = "network"
   target_tenant = "20415a973c9e45d3917f078950644697"
 }
@@ -80,5 +80,5 @@ The following attributes are exported:
 RBAC policies can be imported using the `id`, e.g.
 
 ```
-$ terraform import viettelidc_networking_rbac_policy_v2.rbac_policy_1 eae26a3e-1c33-4cc1-9c31-0cd729c438a1
+$ terraform import vopencloud_networking_rbac_policy_v2.rbac_policy_1 eae26a3e-1c33-4cc1-9c31-0cd729c438a1
 ```

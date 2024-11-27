@@ -1,13 +1,13 @@
 ---
 subcategory: "Identity / Keystone"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_identity_group_v3"
+page_title: "ViettelIdc: vopencloud_identity_group_v3"
 sidebar_current: "docs-openstack-datasource-identity-group-v3"
 description: |-
   Get information on an ViettelIdc Group.
 ---
 
-# viettelidc\_identity\_group\_v3
+# vopencloud\_identity\_group\_v3
 
 Use this data source to get the ID of an ViettelIdc group.
 
@@ -17,7 +17,7 @@ this resource.
 ## Example Usage
 
 ```hcl
-data "viettelidc_identity_group_v3" "admins" {
+data "vopencloud_identity_group_v3" "admins" {
   name = "admins"
 }
 ```

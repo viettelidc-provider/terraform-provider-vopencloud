@@ -1,13 +1,13 @@
 ---
 subcategory: "Identity / Keystone"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_identity_auth_scope_v3"
+page_title: "ViettelIdc: vopencloud_identity_auth_scope_v3"
 sidebar_current: "docs-openstack-datasource-identity-auth-scope-v3"
 description: |-
   Get authentication information from the current authenticated scope.
 ---
 
-# viettelidc\_identity\_auth\_scope\_v3
+# vopencloud\_identity\_auth\_scope\_v3
 
 Use this data source to get authentication information about the current
 auth scope in use. This can be used as self-discovery or introspection of
@@ -24,7 +24,7 @@ is *not* recommended**.
 ### Simple
 
 ```hcl
-data "viettelidc_identity_auth_scope_v3" "scope" {
+data "vopencloud_identity_auth_scope_v3" "scope" {
   name = "my_scope"
 }
 ```
@@ -34,7 +34,7 @@ service catalog:
 
 ```hcl
 locals {
-  object_store_service    = [for entry in data.viettelidc_identity_auth_scope_v3.scope.service_catalog:
+  object_store_service    = [for entry in data.vopencloud_identity_auth_scope_v3.scope.service_catalog:
                                  entry if entry.type=="object-store"][0]
   object_store_endpoint   = [for endpoint in local.object_store_service.endpoints:
                                  endpoint if (endpoint.interface=="public" && endpoint.region=="region1")][0]
@@ -47,14 +47,14 @@ locals {
 See [http](/providers/hashicorp/http/latest/docs/data-sources/http) provider for reference.
 
 ```hcl
-data "viettelidc_identity_auth_scope_v3" "scope" {
+data "vopencloud_identity_auth_scope_v3" "scope" {
   name = "my_scope"
 }
 ```
 
 ```hcl
 locals {
-  object_store_service    = [for entry in data.viettelidc_identity_auth_scope_v3.scope.service_catalog:
+  object_store_service    = [for entry in data.vopencloud_identity_auth_scope_v3.scope.service_catalog:
                                  entry if entry.type=="object-store"][0]
   object_store_endpoint   = [for endpoint in local.object_store_service.endpoints:
                                  endpoint if (endpoint.interface=="public" && endpoint.region=="region1")][0]
@@ -66,7 +66,7 @@ data "http" "example" {
 
   request_headers = {
     "Accept"       = "application/json"
-    "X-Auth-Token" = data.viettelidc_identity_auth_scope_v3.scope.token_id
+    "X-Auth-Token" = data.vopencloud_identity_auth_scope_v3.scope.token_id
   }
 }
 

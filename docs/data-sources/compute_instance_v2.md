@@ -1,20 +1,20 @@
 ---
 subcategory: "Compute / Nova"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_compute_instance_v2"
+page_title: "ViettelIdc: vopencloud_compute_instance_v2"
 sidebar_current: "docs-openstack-datasource-compute-instance-v2"
 description: |-
   Get information on an ViettelIdc Instance
 ---
 
-# viettelidc\_compute\_instance\_v2
+# vopencloud\_compute\_instance\_v2
 
 Use this data source to get the details of a running server
 
 ## Example Usage
 
 ```hcl
-data "viettelidc_compute_instance_v2" "instance" {
+data "vopencloud_compute_instance_v2" "instance" {
   # Randomly generated UUID, for demonstration purposes
   id = "2ba26dc6-a12d-4889-8f25-794ea5bf4453"
 }

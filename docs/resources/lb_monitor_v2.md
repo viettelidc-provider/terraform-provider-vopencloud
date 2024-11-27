@@ -1,21 +1,21 @@
 ---
 subcategory: "Load Balancing as a Service / Octavia"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_lb_monitor_v2"
+page_title: "ViettelIdc: vopencloud_lb_monitor_v2"
 sidebar_current: "docs-openstack-resource-lb-monitor-v2"
 description: |-
   Manages a V2 monitor resource within ViettelIdc.
 ---
 
-# viettelidc\_lb\_monitor\_v2
+# vopencloud\_lb\_monitor\_v2
 
 Manages a V2 monitor resource within ViettelIdc.
 
 ## Example Usage
 
 ```hcl
-resource "viettelidc_lb_monitor_v2" "monitor_1" {
-  pool_id     = viettelidc_lb_pool_v2.pool_1.id
+resource "vopencloud_lb_monitor_v2" "monitor_1" {
+  pool_id     = vopencloud_lb_pool_v2.pool_1.id
   type        = "PING"
   delay       = 20
   timeout     = 10
@@ -93,11 +93,11 @@ The following attributes are exported:
 Load Balancer Pool Monitor can be imported using the Monitor ID, e.g.:
 
 ```
-$ terraform import viettelidc_lb_monitor_v2.monitor_1 47c26fc3-2403-427a-8c79-1589bd0533c2
+$ terraform import vopencloud_lb_monitor_v2.monitor_1 47c26fc3-2403-427a-8c79-1589bd0533c2
 ```
 
 In case of using OpenContrail, the import may not work properly. If you face an issue, try to import the monitor providing its parent pool ID:
 
 ```
-$ terraform import viettelidc_lb_monitor_v2.monitor_1 47c26fc3-2403-427a-8c79-1589bd0533c2/708bc224-0f8c-4981-ac82-97095fe051b6
+$ terraform import vopencloud_lb_monitor_v2.monitor_1 47c26fc3-2403-427a-8c79-1589bd0533c2/708bc224-0f8c-4981-ac82-97095fe051b6
 ```

@@ -1,13 +1,13 @@
 ---
 subcategory: "Networking / Neutron"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_networking_subnet_ids_v2"
+page_title: "ViettelIdc: vopencloud_networking_subnet_ids_v2"
 sidebar_current: "docs-openstack-datasource-networking-subnet-ids-v2"
 description: |-
   Provides a list of Openstack Subnet IDs.
 ---
 
-# viettelidc\_networking\_subnet\_ids\_v2
+# vopencloud\_networking\_subnet\_ids\_v2
 
 Use this data source to get a list of Openstack Subnet IDs matching the
 specified criteria.
@@ -15,7 +15,7 @@ specified criteria.
 ## Example Usage
 
 ```hcl
-data "viettelidc_networking_subnet_ids_v2" "subnets" {
+data "vopencloud_networking_subnet_ids_v2" "subnets" {
   name_regex = "public"
   tags = [
     "public"

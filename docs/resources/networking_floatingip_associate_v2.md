@@ -1,28 +1,28 @@
 ---
 subcategory: "Networking / Neutron"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_networking_floatingip_associate_v2"
+page_title: "ViettelIdc: vopencloud_networking_floatingip_associate_v2"
 sidebar_current: "docs-openstack-resource-networking-floatingip-associate-v2"
 description: |-
   Associates a Floating IP to a Port
 ---
 
-# viettelidc\_networking\_floatingip\_associate\_v2
+# vopencloud\_networking\_floatingip\_associate\_v2
 
 Associates a floating IP to a port. This is useful for situations
 where you have a pre-allocated floating IP or are unable to use the
-`viettelidc_networking_floatingip_v2` resource to create a floating IP.
+`vopencloud_networking_floatingip_v2` resource to create a floating IP.
 
 ## Example Usage
 
 ```hcl
-resource "viettelidc_networking_port_v2" "port_1" {
+resource "vopencloud_networking_port_v2" "port_1" {
   network_id = "a5bbd213-e1d3-49b6-aed1-9df60ea94b9a"
 }
 
-resource "viettelidc_networking_floatingip_associate_v2" "fip_1" {
+resource "vopencloud_networking_floatingip_associate_v2" "fip_1" {
   floating_ip = "1.2.3.4"
-  port_id     = viettelidc_networking_port_v2.port_1.id
+  port_id     = vopencloud_networking_port_v2.port_1.id
 }
 ```
 
@@ -54,5 +54,5 @@ The following attributes are exported:
 Floating IP associations can be imported using the `id` of the floating IP, e.g.
 
 ```
-$ terraform import viettelidc_networking_floatingip_associate_v2.fip 2c7f39f3-702b-48d1-940c-b50384177ee1
+$ terraform import vopencloud_networking_floatingip_associate_v2.fip 2c7f39f3-702b-48d1-940c-b50384177ee1
 ```

@@ -1,13 +1,13 @@
 ---
 subcategory: "Load Balancing as a Service / Octavia"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_lb_members_v2"
+page_title: "ViettelIdc: vopencloud_lb_members_v2"
 sidebar_current: "docs-openstack-resource-lb-members-v2"
 description: |-
   Manages a V2 members resource within ViettelIdc (batch members update).
 ---
 
-# viettelidc\_lb\_members\_v2
+# vopencloud\_lb\_members\_v2
 
 Manages a V2 members resource within ViettelIdc (batch members update).
 
@@ -16,12 +16,12 @@ Please ensure your Openstack cloud supports the required [minor version](../#oct
 
 ~> **Note:** This resource works only within [Octavia API](../#use_octavia). For
 legacy Neutron LBaaS v2 extension please use
-[viettelidc_lb_member_v2](lb_member_v2.html) resource.
+[vopencloud_lb_member_v2](lb_member_v2.html) resource.
 
 ## Example Usage
 
 ```hcl
-resource "viettelidc_lb_members_v2" "members_1" {
+resource "vopencloud_lb_members_v2" "members_1" {
   pool_id = "935685fb-a896-40f9-9ff4-ae531a3a00fe"
 
   member {
@@ -92,5 +92,5 @@ The following attributes are exported:
 Load Balancer Pool Members can be imported using the Pool ID, e.g.:
 
 ```
-$ terraform import viettelidc_lb_members_v2.members_1 c22974d2-4c95-4bcb-9819-0afc5ed303d5
+$ terraform import vopencloud_lb_members_v2.members_1 c22974d2-4c95-4bcb-9819-0afc5ed303d5
 ```

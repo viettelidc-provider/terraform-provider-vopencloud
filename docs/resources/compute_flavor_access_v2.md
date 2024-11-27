@@ -1,13 +1,13 @@
 ---
 subcategory: "Compute / Nova"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_compute_flavor_access_v2"
+page_title: "ViettelIdc: vopencloud_compute_flavor_access_v2"
 sidebar_current: "docs-openstack-resource-compute-flavor-access-v2"
 description: |-
   Manages a project access for flavor V2 resource within ViettelIdc.
 ---
 
-# viettelidc\_compute\_flavor\_access\_v2
+# vopencloud\_compute\_flavor\_access\_v2
 
 Manages a project access for flavor V2 resource within ViettelIdc.
 
@@ -19,11 +19,11 @@ this resource.
 ## Example Usage
 
 ```hcl
-resource "viettelidc_identity_project_v3" "project_1" {
+resource "vopencloud_identity_project_v3" "project_1" {
   name = "my-project"
 }
 
-resource "viettelidc_compute_flavor_v2" "flavor_1" {
+resource "vopencloud_compute_flavor_v2" "flavor_1" {
   name      = "my-flavor"
   ram       = "8096"
   vcpus     = "2"
@@ -31,9 +31,9 @@ resource "viettelidc_compute_flavor_v2" "flavor_1" {
   is_public = false
 }
 
-resource "viettelidc_compute_flavor_access_v2" "access_1" {
-  tenant_id = viettelidc_identity_project_v3.project_1.id
-  flavor_id = viettelidc_compute_flavor_v2.flavor_1.id
+resource "vopencloud_compute_flavor_access_v2" "access_1" {
+  tenant_id = vopencloud_identity_project_v3.project_1.id
+  flavor_id = vopencloud_compute_flavor_v2.flavor_1.id
 }
 ```
 
@@ -64,5 +64,5 @@ This resource can be imported by specifying all two arguments, separated
 by a forward slash:
 
 ```
-$ terraform import viettelidc_compute_flavor_access_v2.access_1 flavor_id/tenant_id
+$ terraform import vopencloud_compute_flavor_access_v2.access_1 flavor_id/tenant_id
 ```

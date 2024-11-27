@@ -1,20 +1,20 @@
 ---
 subcategory: "Deprecated"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_lb_monitor_v1"
+page_title: "ViettelIdc: vopencloud_lb_monitor_v1"
 sidebar_current: "docs-openstack-resource-lb-monitor-v1"
 description: |-
   Manages a V1 load balancer monitor resource within ViettelIdc.
 ---
 
-# viettelidc\_lb\_monitor\_v1
+# vopencloud\_lb\_monitor\_v1
 
 Manages a V1 load balancer monitor resource within ViettelIdc.
 
 ## Example Usage
 
 ```hcl
-resource "viettelidc_lb_monitor_v1" "monitor_1" {
+resource "vopencloud_lb_monitor_v1" "monitor_1" {
   type           = "PING"
   delay          = 30
   timeout        = 5
@@ -87,5 +87,5 @@ The following attributes are exported:
 Load Balancer Members can be imported using the `id`, e.g.
 
 ```
-$ terraform import viettelidc_lb_monitor_v1.monitor_1 119d7530-72e9-449a-aa97-124a5ef1992c
+$ terraform import vopencloud_lb_monitor_v1.monitor_1 119d7530-72e9-449a-aa97-124a5ef1992c
 ```

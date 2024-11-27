@@ -1,13 +1,13 @@
 ---
 subcategory: "Networking / Neutron"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_networking_qos_minimum_bandwidth_rule_v2"
+page_title: "ViettelIdc: vopencloud_networking_qos_minimum_bandwidth_rule_v2"
 sidebar_current: "docs-openstack-resource-networking-qos-minimum-bandwidth-rule-v2"
 description: |-
   Manages a V2 Neutron QoS minimum bandwidth rule resource within ViettelIdc.
 ---
 
-# viettelidc\_networking\_qos\_minimum\_bandwidth\_rule\_v2
+# vopencloud\_networking\_qos\_minimum\_bandwidth\_rule\_v2
 
 Manages a V2 Neutron QoS minimum bandwidth rule resource within ViettelIdc.
 
@@ -16,13 +16,13 @@ Manages a V2 Neutron QoS minimum bandwidth rule resource within ViettelIdc.
 ### Create a QoS Policy with some minimum bandwidth rule
 
 ```hcl
-resource "viettelidc_networking_qos_policy_v2" "qos_policy_1" {
+resource "vopencloud_networking_qos_policy_v2" "qos_policy_1" {
   name        = "qos_policy_1"
   description = "min_kbps"
 }
 
-resource "viettelidc_networking_qos_minimum_bandwidth_rule_v2" "minimum_bandwidth_rule_1" {
-  qos_policy_id = viettelidc_networking_qos_policy_v2.qos_policy_1.id
+resource "vopencloud_networking_qos_minimum_bandwidth_rule_v2" "minimum_bandwidth_rule_1" {
+  qos_policy_id = vopencloud_networking_qos_policy_v2.qos_policy_1.id
   min_kbps      = 200
 }
 ```
@@ -57,5 +57,5 @@ The following attributes are exported:
 QoS minimum bandwidth rules can be imported using the `qos_policy_id/minimum_bandwidth_rule_id` format, e.g.
 
 ```
-$ terraform import viettelidc_networking_qos_minimum_bandwidth_rule_v2.minimum_bandwidth_rule_1 d6ae28ce-fcb5-4180-aa62-d260a27e09ae/46dfb556-b92f-48ce-94c5-9a9e2140de94
+$ terraform import vopencloud_networking_qos_minimum_bandwidth_rule_v2.minimum_bandwidth_rule_1 d6ae28ce-fcb5-4180-aa62-d260a27e09ae/46dfb556-b92f-48ce-94c5-9a9e2140de94
 ```

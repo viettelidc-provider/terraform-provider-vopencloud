@@ -1,13 +1,13 @@
 ---
 subcategory: "Block Storage / Cinder"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_blockstorage_volume_type_access_v3"
+page_title: "ViettelIdc: vopencloud_blockstorage_volume_type_access_v3"
 sidebar_current: "docs-openstack-resource-blockstorage-volume-type-access-v3"
 description: |-
   Manages a V3 volume type access resource within ViettelIdc.
 ---
 
-# viettelidc\_blockstorage\_volume\_type\_access\_v3
+# vopencloud\_blockstorage\_volume\_type\_access\_v3
 
 Manages a V3 block storage volume type access resource within ViettelIdc.
 
@@ -17,18 +17,18 @@ Manages a V3 block storage volume type access resource within ViettelIdc.
 ## Example Usage
 
 ```hcl
-resource "viettelidc_identity_project_v3" "project_1" {
+resource "vopencloud_identity_project_v3" "project_1" {
   name = "project_1"
 }
 
-resource "viettelidc_blockstorage_volume_type_v3" "volume_type_1" {
+resource "vopencloud_blockstorage_volume_type_v3" "volume_type_1" {
   name      = "volume_type_1"
   is_public = false
 }
 
-resource "viettelidc_blockstorage_volume_type_access_v3" "volume_type_access" {
-  project_id     = viettelidc_identity_project_v3.project_1.id
-  volume_type_id = viettelidc_blockstorage_volume_type_v3.volume_type_1.id
+resource "vopencloud_blockstorage_volume_type_access_v3" "volume_type_access" {
+  project_id     = vopencloud_identity_project_v3.project_1.id
+  volume_type_id = vopencloud_blockstorage_volume_type_v3.volume_type_1.id
 }
 
 ```
@@ -61,5 +61,5 @@ The following attributes are exported:
 Volume types access can be imported using the `volume_type_id/project_id`, e.g.
 
 ```
-$ terraform import viettelidc_blockstorage_volume_type_access_v3.volume_type_access 941793f0-0a34-4bc4-b72e-a6326ae58283/ed498e81f0cc448bae0ad4f8f21bf67f
+$ terraform import vopencloud_blockstorage_volume_type_access_v3.volume_type_access 941793f0-0a34-4bc4-b72e-a6326ae58283/ed498e81f0cc448bae0ad4f8f21bf67f
 ```

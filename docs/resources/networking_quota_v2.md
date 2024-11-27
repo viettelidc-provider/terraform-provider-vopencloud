@@ -1,13 +1,13 @@
 ---
 subcategory: "Networking / Neutron"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_networking_quota_v2"
+page_title: "ViettelIdc: vopencloud_networking_quota_v2"
 sidebar_current: "docs-openstack-resource-networking-quota-v2"
 description: |-
   Manages a V2 networking quota resource within ViettelIdc.
 ---
 
-# viettelidc\_networking\_quota\_v2
+# vopencloud\_networking\_quota\_v2
 
 Manages a V2 networking quota resource within ViettelIdc.
 
@@ -22,12 +22,12 @@ Manages a V2 networking quota resource within ViettelIdc.
 ## Example Usage
 
 ```hcl
-resource "viettelidc_identity_project_v3" "project_1" {
+resource "vopencloud_identity_project_v3" "project_1" {
   name = project_1
 }
 
-resource "viettelidc_networking_quota_v2" "quota_1" {
-  project_id          = viettelidc_identity_project_v3.project_1.id
+resource "vopencloud_networking_quota_v2" "quota_1" {
+  project_id          = vopencloud_identity_project_v3.project_1.id
   floatingip          = 10
   network             = 4
   port                = 100
@@ -99,5 +99,5 @@ The following attributes are exported:
 Quotas can be imported using the `project_id/region_name`, e.g.
 
 ```
-$ terraform import viettelidc_networking_quota_v2.quota_1 2a0f2240-c5e6-41de-896d-e80d97428d6b/region_1
+$ terraform import vopencloud_networking_quota_v2.quota_1 2a0f2240-c5e6-41de-896d-e80d97428d6b/region_1
 ```

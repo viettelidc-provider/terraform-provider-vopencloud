@@ -1,13 +1,13 @@
 ---
 subcategory: "Identity / Keystone"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_identity_service_v3"
+page_title: "ViettelIdc: vopencloud_identity_service_v3"
 sidebar_current: "docs-openstack-resource-identity-service-v3"
 description: |-
   Manages a V3 Service resource within ViettelIdc Keystone.
 ---
 
-# viettelidc\_identity\_service\_v3
+# vopencloud\_identity\_service\_v3
 
 Manages a V3 Service resource within ViettelIdc Keystone.
 
@@ -16,7 +16,7 @@ Manages a V3 Service resource within ViettelIdc Keystone.
 ## Example Usage
 
 ```hcl
-resource "viettelidc_identity_service_v3" "service_1" {
+resource "vopencloud_identity_service_v3" "service_1" {
   name = "custom"
   type = "custom"
 }
@@ -53,5 +53,5 @@ are exported:
 Services can be imported using the `id`, e.g.
 
 ```
-$ terraform import viettelidc_identity_service_v3.service_1 6688e967-158a-496f-a224-cae3414e6b61
+$ terraform import vopencloud_identity_service_v3.service_1 6688e967-158a-496f-a224-cae3414e6b61
 ```

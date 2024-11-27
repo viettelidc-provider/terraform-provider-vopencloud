@@ -1,20 +1,20 @@
 ---
 subcategory: "Deprecated"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_blockstorage_volume_v2"
+page_title: "ViettelIdc: vopencloud_blockstorage_volume_v2"
 sidebar_current: "docs-openstack-datasource-blockstorage-volume-v2"
 description: |-
   Get information on an ViettelIdc Volume.
 ---
 
-# viettelidc\_blockstorage\_volume\_v2
+# vopencloud\_blockstorage\_volume\_v2
 
 Use this data source to get information about an existing volume.
 
 ## Example Usage
 
 ```hcl
-data "viettelidc_blockstorage_volume_v2" "volume_1" {
+data "vopencloud_blockstorage_volume_v2" "volume_1" {
   name = "volume_1"
 }
 ```

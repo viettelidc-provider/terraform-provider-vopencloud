@@ -1,26 +1,26 @@
 ---
 subcategory: "Compute / Nova"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_compute_floatingip_v2"
+page_title: "ViettelIdc: vopencloud_compute_floatingip_v2"
 sidebar_current: "docs-openstack-resource-compute-floatingip-v2"
 description: |-
   Manages a V2 floating IP resource within ViettelIdc Nova (compute).
 ---
 
-# viettelidc\_compute\_floatingip\_v2
+# vopencloud\_compute\_floatingip\_v2
 
 Manages a V2 floating IP resource within ViettelIdc Nova (compute)
 that can be used for compute instances.
 
 Please note that managing floating IPs through the ViettelIdc Compute API has
 been deprecated. Unless you are using an older ViettelIdc environment, it is
-recommended to use the [`viettelidc_networking_floatingip_v2`](networking_floatingip_v2.html)
+recommended to use the [`vopencloud_networking_floatingip_v2`](networking_floatingip_v2.html)
 resource instead, which uses the ViettelIdc Networking API.
 
 ## Example Usage
 
 ```hcl
-resource "viettelidc_compute_floatingip_v2" "floatip_1" {
+resource "vopencloud_compute_floatingip_v2" "floatip_1" {
   pool = "public"
 }
 ```
@@ -53,5 +53,5 @@ The following attributes are exported:
 Floating IPs can be imported using the `id`, e.g.
 
 ```
-$ terraform import viettelidc_compute_floatingip_v2.floatip_1 89c60255-9bd6-460c-822a-e2b959ede9d2
+$ terraform import vopencloud_compute_floatingip_v2.floatip_1 89c60255-9bd6-460c-822a-e2b959ede9d2
 ```

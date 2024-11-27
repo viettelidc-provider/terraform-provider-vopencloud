@@ -1,20 +1,20 @@
 ---
 subcategory: "Networking / Neutron"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_networking_port_v2"
+page_title: "ViettelIdc: vopencloud_networking_port_v2"
 sidebar_current: "docs-openstack-datasource-networking-port-v2"
 description: |-
   Get information of an ViettelIdc Port.
 ---
 
-# viettelidc\_networking\_port\_v2
+# vopencloud\_networking\_port\_v2
 
 Use this data source to get the ID of an available ViettelIdc port.
 
 ## Example Usage
 
 ```hcl
-data "viettelidc_networking_port_v2" "port_1" {
+data "vopencloud_networking_port_v2" "port_1" {
   name = "port_1"
 }
 ```

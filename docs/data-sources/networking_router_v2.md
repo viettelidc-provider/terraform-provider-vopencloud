@@ -1,20 +1,20 @@
 ---
 subcategory: "Networking / Neutron"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_networking_router_v2"
+page_title: "ViettelIdc: vopencloud_networking_router_v2"
 sidebar_current: "docs-openstack-datasource-networking-router-v2"
 description: |-
   Get information on an ViettelIdc Floating IP.
 ---
 
-# viettelidc\_networking\_router\_v2
+# vopencloud\_networking\_router\_v2
 
 Use this data source to get the ID of an available ViettelIdc router.
 
 ## Example Usage
 
 ```hcl
-data "viettelidc_networking_router_v2" "router" {
+data "vopencloud_networking_router_v2" "router" {
   name = "router_1"
 }
 ```

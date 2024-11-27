@@ -1,20 +1,20 @@
 ---
 subcategory: "Compute / Nova"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_compute_limits_v2"
+page_title: "ViettelIdc: vopencloud_compute_limits_v2"
 sidebar_current: "docs-openstack-datasource-compute-limits-v2"
 description: |-
   Get information on a Compute Limits of a project.
 ---
 
-# viettelidc\_compute\_limits\_v2
+# vopencloud\_compute\_limits\_v2
 
 Use this data source to get the compute limits of an ViettelIdc project.
 
 ## Example Usage
 
 ```hcl
-data "viettelidc_compute_limits_v2" "limits" {
+data "vopencloud_compute_limits_v2" "limits" {
   project_id = "2e367a3d29f94fd988e6ec54e305ec9d"
 }
 ```

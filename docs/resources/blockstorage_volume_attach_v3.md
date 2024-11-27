@@ -1,18 +1,18 @@
 ---
 subcategory: "Block Storage / Cinder"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_blockstorage_volume_attach_v3"
+page_title: "ViettelIdc: vopencloud_blockstorage_volume_attach_v3"
 sidebar_current: "docs-openstack-resource-blockstorage-volume-attach-v3"
 description: |-
   Creates an attachment connection to a Block Storage volume
 ---
 
-# viettelidc\_blockstorage\_volume\_attach\_v3
+# vopencloud\_blockstorage\_volume\_attach\_v3
 
 ~> **Note:** This resource usually requires admin privileges.
 
 ~> **Note:** This resource does not actually attach a volume to an instance.
-Please use the `viettelidc_compute_volume_attach_v2` resource for that.
+Please use the `vopencloud_compute_volume_attach_v2` resource for that.
 
 ~> **Note:** All arguments including the `data` computed attribute will be
 stored in the raw state as plain-text. [Read more about sensitive data in
@@ -22,20 +22,20 @@ Creates a general purpose attachment connection to a Block
 Storage volume using the ViettelIdc Block Storage (Cinder) v3 API.
 
 Depending on your Block Storage service configuration, this
-resource can assist in attaching a volume to a non-ViettelIdc resource
+resource can assist in attaching a volume to a non-vopencloud resource
 such as a bare-metal server or a remote virtual machine in a
 different cloud provider.
 
 ## Example Usage
 
 ```hcl
-resource "viettelidc_blockstorage_volume_v3" "volume_1" {
+resource "vopencloud_blockstorage_volume_v3" "volume_1" {
   name = "volume_1"
   size = 1
 }
 
-resource "viettelidc_blockstorage_volume_attach_v3" "va_1" {
-  volume_id  = viettelidc_blockstorage_volume_v3.volume_1.id
+resource "vopencloud_blockstorage_volume_attach_v3" "va_1" {
+  volume_id  = vopencloud_blockstorage_volume_v3.volume_1.id
   device     = "auto"
   host_name  = "devstack"
   ip_address = "192.168.255.10"
@@ -128,7 +128,7 @@ The contents of `data` will vary from each Block Storage service. You must have
 a good understanding of how the service is configured and how to make the
 appropriate final connection. However, if used correctly, this has the
 flexibility to be able to attach ViettelIdc Block Storage volumes to
-non-ViettelIdc resources.
+non-vopencloud resources.
 
 ## Import
 

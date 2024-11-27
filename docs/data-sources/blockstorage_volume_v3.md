@@ -1,20 +1,20 @@
 ---
 subcategory: "Block Storage / Cinder"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_blockstorage_volume_v3"
+page_title: "ViettelIdc: vopencloud_blockstorage_volume_v3"
 sidebar_current: "docs-openstack-datasource-blockstorage-volume-v3"
 description: |-
   Get information on an ViettelIdc Volume.
 ---
 
-# viettelidc\_blockstorage\_volume\_v3
+# vopencloud\_blockstorage\_volume\_v3
 
 Use this data source to get information about an existing volume.
 
 ## Example Usage
 
 ```hcl
-data "viettelidc_blockstorage_volume_v3" "volume_1" {
+data "vopencloud_blockstorage_volume_v3" "volume_1" {
   name = "volume_1"
 }
 ```

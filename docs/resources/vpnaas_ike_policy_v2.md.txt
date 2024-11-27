@@ -1,20 +1,20 @@
 ---
 subcategory: "VPNaaS / Neutron"
 layout: "openstack"
-page_title: "OpenStack: viettelidc_vpnaas_ike_policy_v2"
+page_title: "OpenStack: vopencloud_vpnaas_ike_policy_v2"
 sidebar_current: "docs-openstack-resource-vpnaas-ike-policy-v2"
 description: |-
   Manages a V2 Neutron IKE policy resource within OpenStack.
 ---
 
-# viettelidc\_vpnaas\_ike\_policy\_v2
+# vopencloud\_vpnaas\_ike\_policy\_v2
 
 Manages a V2 Neutron IKE policy resource within OpenStack.
 
 ## Example Usage
 
 ```hcl
-resource "viettelidc_vpnaas_ike_policy_v2" "policy_1" {
+resource "vopencloud_vpnaas_ike_policy_v2" "policy_1" {
   name = "my_policy"
 }
 ```
@@ -84,5 +84,5 @@ The following attributes are exported:
 Services can be imported using the `id`, e.g.
 
 ```
-$ terraform import viettelidc_vpnaas_ike_policy_v2.policy_1 832cb7f3-59fe-40cf-8f64-8350ffc03272
+$ terraform import vopencloud_vpnaas_ike_policy_v2.policy_1 832cb7f3-59fe-40cf-8f64-8350ffc03272
 ```

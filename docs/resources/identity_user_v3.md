@@ -1,13 +1,13 @@
 ---
 subcategory: "Identity / Keystone"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_identity_user_v3"
+page_title: "ViettelIdc: vopencloud_identity_user_v3"
 sidebar_current: "docs-openstack-resource-identity-user-v3"
 description: |-
   Manages a V3 User resource within ViettelIdc Keystone.
 ---
 
-# viettelidc\_identity\_user\_v3
+# vopencloud\_identity\_user\_v3
 
 Manages a V3 User resource within ViettelIdc Keystone.
 
@@ -21,12 +21,12 @@ this resource.
 ## Example Usage
 
 ```hcl
-resource "viettelidc_identity_project_v3" "project_1" {
+resource "vopencloud_identity_project_v3" "project_1" {
   name = "project_1"
 }
 
-resource "viettelidc_identity_user_v3" "user_1" {
-  default_project_id = viettelidc_identity_project_v3.project_1.id
+resource "vopencloud_identity_user_v3" "user_1" {
+  default_project_id = vopencloud_identity_project_v3.project_1.id
   name               = "user_1"
   description        = "A user"
 
@@ -106,5 +106,5 @@ The following attributes are exported:
 Users can be imported using the `id`, e.g.
 
 ```
-$ terraform import viettelidc_identity_user_v3.user_1 89c60255-9bd6-460c-822a-e2b959ede9d2
+$ terraform import vopencloud_identity_user_v3.user_1 89c60255-9bd6-460c-822a-e2b959ede9d2
 ```

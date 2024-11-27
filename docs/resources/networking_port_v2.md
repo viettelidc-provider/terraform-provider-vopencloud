@@ -1,13 +1,13 @@
 ---
 subcategory: "Networking / Neutron"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_networking_port_v2"
+page_title: "ViettelIdc: vopencloud_networking_port_v2"
 sidebar_current: "docs-openstack-resource-networking-port-v2"
 description: |-
   Manages a V2 port resource within ViettelIdc.
 ---
 
-# viettelidc\_networking\_port\_v2
+# vopencloud\_networking\_port\_v2
 
 Manages a V2 port resource within ViettelIdc.
 
@@ -15,21 +15,21 @@ Manages a V2 port resource within ViettelIdc.
 to does not have a subnet. If you create the subnet resource in the
 same run as the port, make sure to use `fixed_ip.subnet_id` or 
 `depends_on` to enforce the subnet resource creation before the port
-creation is triggered. More info [here](https://github.com/viettelcloud-provider/terraform-provider-viettelidc/issues/1606#issuecomment-1790945191)
+creation is triggered. More info [here](https://github.com/viettelcloud-provider/terraform-provider-vopencloud/issues/1606#issuecomment-1790945191)
 
 ## Example Usage
 
 ### Simple port
 
 ```hcl
-resource "viettelidc_networking_network_v2" "network_1" {
+resource "vopencloud_networking_network_v2" "network_1" {
   name           = "network_1"
   admin_state_up = "true"
 }
 
-resource "viettelidc_networking_port_v2" "port_1" {
+resource "vopencloud_networking_port_v2" "port_1" {
   name           = "port_1"
-  network_id     = viettelidc_networking_network_v2.network_1.id
+  network_id     = vopencloud_networking_network_v2.network_1.id
   admin_state_up = "true"
 }
 ```
@@ -37,24 +37,24 @@ resource "viettelidc_networking_port_v2" "port_1" {
 ### Port defining fixed_ip.subnet_id
 
 ```hcl
-resource "viettelidc_networking_network_v2" "network_1" {
+resource "vopencloud_networking_network_v2" "network_1" {
   name           = "network_1"
   admin_state_up = "true"
 }
 
-resource "viettelidc_networking_subnet_v2" "subnet_1" {
+resource "vopencloud_networking_subnet_v2" "subnet_1" {
   name       = "subnet_1"
-  network_id = viettelidc_networking_network_v2.network_1.id
+  network_id = vopencloud_networking_network_v2.network_1.id
   cidr       = "192.168.199.0/24"
 }
 
-resource "viettelidc_networking_port_v2" "port_1" {
+resource "vopencloud_networking_port_v2" "port_1" {
   name           = "port_1"
-  network_id     = viettelidc_networking_network_v2.network_1.id
+  network_id     = vopencloud_networking_network_v2.network_1.id
   admin_state_up = "true"
 
   fixed_ip {
-    subnet_id = viettelidc_networking_subnet_v2.subnet_1.id
+    subnet_id = vopencloud_networking_subnet_v2.subnet_1.id
   }
 }
 ```
@@ -62,14 +62,14 @@ resource "viettelidc_networking_port_v2" "port_1" {
 ### Port with physical binding information
 
 ```hcl
-resource "viettelidc_networking_network_v2" "network_1" {
+resource "vopencloud_networking_network_v2" "network_1" {
   name           = "network_1"
   admin_state_up = "true"
 }
 
-resource "viettelidc_networking_port_v2" "port_1" {
+resource "vopencloud_networking_port_v2" "port_1" {
   name           = "port_1"
-  network_id     = viettelidc_networking_network_v2.network_1.id
+  network_id     = vopencloud_networking_network_v2.network_1.id
   device_id      = "cdf70fcf-c161-4f24-9c70-96b3f5a54b71"
   device_owner   = "baremetal:none"
   admin_state_up = "true"
@@ -249,7 +249,7 @@ The following attributes are exported:
 Ports can be imported using the `id`, e.g.
 
 ```
-$ terraform import viettelidc_networking_port_v2.port_1 eae26a3e-1c33-4cc1-9c31-0cd729c438a1
+$ terraform import vopencloud_networking_port_v2.port_1 eae26a3e-1c33-4cc1-9c31-0cd729c438a1
 ```
 
 ## Notes
@@ -257,5 +257,5 @@ $ terraform import viettelidc_networking_port_v2.port_1 eae26a3e-1c33-4cc1-9c31-
 ### Ports and Instances
 
 There are some notes to consider when connecting Instances to networks using
-Ports. Please see the `viettelidc_compute_instance_v2` documentation for further
+Ports. Please see the `vopencloud_compute_instance_v2` documentation for further
 documentation.

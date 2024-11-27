@@ -1,20 +1,20 @@
 ---
 subcategory: "Deprecated"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_lb_pool_v1"
+page_title: "ViettelIdc: vopencloud_lb_pool_v1"
 sidebar_current: "docs-openstack-resource-lb-pool-v1"
 description: |-
   Manages a V1 load balancer pool resource within ViettelIdc.
 ---
 
-# viettelidc\_lb\_pool\_v1
+# vopencloud\_lb\_pool\_v1
 
 Manages a V1 load balancer pool resource within ViettelIdc.
 
 ## Example Usage
 
 ```hcl
-resource "viettelidc_lb_pool_v1" "pool_1" {
+resource "vopencloud_lb_pool_v1" "pool_1" {
   name        = "tf_test_lb_pool"
   protocol    = "HTTP"
   subnet_id   = "12345"
@@ -27,18 +27,18 @@ resource "viettelidc_lb_pool_v1" "pool_1" {
 ## Complete Load Balancing Stack Example
 
 ```
-resource "viettelidc_networking_network_v2" "network_1" {
+resource "vopencloud_networking_network_v2" "network_1" {
   name           = "network_1"
   admin_state_up = "true"
 }
 
-resource "viettelidc_networking_subnet_v2" "subnet_1" {
-  network_id = viettelidc_networking_network_v2.network_1.id
+resource "vopencloud_networking_subnet_v2" "subnet_1" {
+  network_id = vopencloud_networking_network_v2.network_1.id
   cidr       = "192.168.199.0/24"
   ip_version = 4
 }
 
-resource "viettelidc_compute_secgroup_v2" "secgroup_1" {
+resource "vopencloud_compute_secgroup_v2" "secgroup_1" {
   name        = "secgroup_1"
   description = "Rules for secgroup_1"
 
@@ -57,25 +57,25 @@ resource "viettelidc_compute_secgroup_v2" "secgroup_1" {
   }
 }
 
-resource "viettelidc_compute_instance_v2" "instance_1" {
+resource "vopencloud_compute_instance_v2" "instance_1" {
   name            = "instance_1"
-  security_groups = ["default", viettelidc_compute_secgroup_v2.secgroup_1.name]
+  security_groups = ["default", vopencloud_compute_secgroup_v2.secgroup_1.name]
 
   network {
-    uuid = viettelidc_networking_network_v2.network_1.id
+    uuid = vopencloud_networking_network_v2.network_1.id
   }
 }
 
-resource "viettelidc_compute_instance_v2" "instance_2" {
+resource "vopencloud_compute_instance_v2" "instance_2" {
   name            = "instance_2"
-  security_groups = ["default", viettelidc_compute_secgroup_v2.secgroup_1.name]
+  security_groups = ["default", vopencloud_compute_secgroup_v2.secgroup_1.name]
 
   network {
-    uuid = viettelidc_networking_network_v2.network_1.id
+    uuid = vopencloud_networking_network_v2.network_1.id
   }
 }
 
-resource "viettelidc_lb_monitor_v1" "monitor_1" {
+resource "vopencloud_lb_monitor_v1" "monitor_1" {
   type           = "TCP"
   delay          = 30
   timeout        = 5
@@ -83,32 +83,32 @@ resource "viettelidc_lb_monitor_v1" "monitor_1" {
   admin_state_up = "true"
 }
 
-resource "viettelidc_lb_pool_v1" "pool_1" {
+resource "vopencloud_lb_pool_v1" "pool_1" {
   name        = "pool_1"
   protocol    = "TCP"
-  subnet_id   = viettelidc_networking_subnet_v2.subnet_1.id
+  subnet_id   = vopencloud_networking_subnet_v2.subnet_1.id
   lb_method   = "ROUND_ROBIN"
-  monitor_ids = [viettelidc_lb_monitor_v1.monitor_1.id]
+  monitor_ids = [vopencloud_lb_monitor_v1.monitor_1.id]
 }
 
-resource "viettelidc_lb_member_v1" "member_1" {
-  pool_id = viettelidc_lb_pool_v1.pool_1.id
-  address = viettelidc_compute_instance_v2.instance_1.access_ip_v4
+resource "vopencloud_lb_member_v1" "member_1" {
+  pool_id = vopencloud_lb_pool_v1.pool_1.id
+  address = vopencloud_compute_instance_v2.instance_1.access_ip_v4
   port    = 80
 }
 
-resource "viettelidc_lb_member_v1" "member_2" {
-  pool_id = viettelidc_lb_pool_v1.pool_1.id
-  address = viettelidc_compute_instance_v2.instance_2.access_ip_v4
+resource "vopencloud_lb_member_v1" "member_2" {
+  pool_id = vopencloud_lb_pool_v1.pool_1.id
+  address = vopencloud_compute_instance_v2.instance_2.access_ip_v4
   port    = 80
 }
 
-resource "viettelidc_lb_vip_v1" "vip_1" {
+resource "vopencloud_lb_vip_v1" "vip_1" {
   name      = "vip_1"
-  subnet_id = viettelidc_networking_subnet_v2.subnet_1.id
+  subnet_id = vopencloud_networking_subnet_v2.subnet_1.id
   protocol  = "TCP"
   port      = 80
-  pool_id   = viettelidc_lb_pool_v1.pool_1.id
+  pool_id   = vopencloud_lb_pool_v1.pool_1.id
 }
 ```
 
@@ -147,7 +147,7 @@ The following arguments are supported:
 * `member` - (Optional) An existing node to add to the pool. Changing this
     updates the members of the pool. The member object structure is documented
     below. Please note that the `member` block is deprecated in favor of the
-    `viettelidc_lb_member_v1` resource.
+    `vopencloud_lb_member_v1` resource.
 
 The `member` block supports:
 
@@ -180,12 +180,12 @@ The following attributes are exported:
 
 ## Notes
 
-The `member` block is deprecated in favor of the `viettelidc_lb_member_v1` resource.
+The `member` block is deprecated in favor of the `vopencloud_lb_member_v1` resource.
 
 ## Import
 
 Load Balancer Pools can be imported using the `id`, e.g.
 
 ```
-$ terraform import viettelidc_lb_pool_v1.pool_1 b255e6ba-02ad-43e6-8951-3428ca26b713
+$ terraform import vopencloud_lb_pool_v1.pool_1 b255e6ba-02ad-43e6-8951-3428ca26b713
 ```

@@ -1,13 +1,13 @@
 ---
 subcategory: "Identity / Keystone"
 layout: "openstack"
-page_title: "ViettelIdc: viettelidc_identity_group_v3"
+page_title: "ViettelIdc: vopencloud_identity_group_v3"
 sidebar_current: "docs-openstack-resource-identity-group-v3"
 description: |-
   Manages a V3 group resource within ViettelIdc Keystone.
 ---
 
-# viettelidc\_identity\_group\_v3
+# vopencloud\_identity\_group\_v3
 
 Manages a V3 group resource within ViettelIdc Keystone.
 
@@ -17,7 +17,7 @@ this resource.
 ## Example Usage
 
 ```hcl
-resource "viettelidc_identity_group_v3" "group_1" {
+resource "vopencloud_identity_group_v3" "group_1" {
   name        = "group_1"
   description = "group 1"
 }
@@ -51,5 +51,5 @@ The following attributes are exported:
 groups can be imported using the `id`, e.g.
 
 ```
-$ terraform import viettelidc_identity_group_v3.group_1 89c60255-9bd6-460c-822a-e2b959ede9d2
+$ terraform import vopencloud_identity_group_v3.group_1 89c60255-9bd6-460c-822a-e2b959ede9d2
 ```
