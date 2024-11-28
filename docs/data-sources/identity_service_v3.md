@@ -1,15 +1,15 @@
 ---
 subcategory: "Identity / Keystone"
 layout: "openstack"
-page_title: "ViettelIdc: vopencloud_identity_service_v3"
+page_title: "VOpenCloud: vopencloud_identity_service_v3"
 sidebar_current: "docs-openstack-datasource-identity-service-v3"
 description: |-
-  Get information on an ViettelIdc Service.
+  Get information on an VOpenCloud Service.
 ---
 
 # vopencloud\_identity\_service\_v3
 
-Use this data source to get the ID of an ViettelIdc service.
+Use this data source to get the ID of an VOpenCloud service.
 
 ~> **Note:** This usually requires admin privileges.
 

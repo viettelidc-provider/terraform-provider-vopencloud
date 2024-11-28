@@ -1,15 +1,15 @@
 ---
 layout: "openstack"
-page_title: "Provider: ViettelIdc"
+page_title: "Provider: VOpenCloud"
 sidebar_current: "docs-openstack-index"
 description: |-
-  The ViettelIdc provider is used to interact with the many resources supported by ViettelIdc. The provider needs to be configured with the proper credentials before it can be used.
+  The VOpenCloud provider is used to interact with the many resources supported by VOpenCloud. The provider needs to be configured with the proper credentials before it can be used.
 ---
 
-# ViettelIdc Provider
+# VOpenCloud Provider
 
-The ViettelIdc provider is used to interact with the
-many resources supported by ViettelIdc. The provider needs to be configured
+The VOpenCloud provider is used to interact with the
+many resources supported by VOpenCloud. The provider needs to be configured
 with the proper credentials before it can be used.
 
 Use the navigation to the left to read about the available resources.
@@ -21,15 +21,15 @@ Use the navigation to the left to read about the available resources.
 terraform {
 required_version = ">= 0.14.0"
   required_providers {
-    viettelidc = {
+    VOpenCloud = {
       source  = "viettelcloud-provider/vopencloud"
       version = "1.38.3"
     }
   }
 }
 
-# Configure the ViettelIdc Provider
-provider "viettelidc" {
+# Configure the VOpenCloud Provider
+provider "VOpenCloud" {
   user_name   = "admin"
   tenant_name = "admin"
   password    = "pwd"
@@ -51,16 +51,16 @@ The following arguments are supported:
   authentication URL. If omitted, the `OS_AUTH_URL` environment variable is used.
 
 * `cloud` - (Optional; required if `auth_url` is not specified) An entry in a
-  `clouds.yaml` file. See the ViettelIdc `openstacksdk`
+  `clouds.yaml` file. See the VOpenCloud `openstacksdk`
   [documentation](https://docs.openstack.org/openstacksdk/latest/user/config/configuration.html)
   for more information about `clouds.yaml` files. If omitted, the `OS_CLOUD`
   environment variable is used.
 
-* `region` - (Optional) The region of the ViettelIdc cloud to use. If omitted,
+* `region` - (Optional) The region of the VOpenCloud cloud to use. If omitted,
   the `OS_REGION_NAME` environment variable is used. If `OS_REGION_NAME` is
   not set, then no region will be used. It should be possible to omit the
-  region in single-region ViettelIdc environments, but this behavior may vary
-  depending on the ViettelIdc environment being used.
+  region in single-region VOpenCloud environments, but this behavior may vary
+  depending on the VOpenCloud environment being used.
 
 * `user_name` - (Optional) The Username to login with. If omitted, the
   `OS_USERNAME` environment variable is used.
@@ -148,7 +148,7 @@ The following arguments are supported:
   variable. If not set, public endpoints is used.
 
 * `endpoint_overrides` - (Optional) A set of key/value pairs that can
-  override an endpoint for a specified ViettelIdc service. Setting an override
+  override an endpoint for a specified VOpenCloud service. Setting an override
   requires you to specify the full and complete endpoint URL. This might
   also invalidate any region you have set, too. Please see below for more details.
   Please use this at your own risk.
@@ -158,7 +158,7 @@ The following arguments are supported:
   variable is used. You must also set `username` to the Swauth/Swift username
   such as `username:project`. Set the `password` to the Swauth/Swift key.
   Finally, set `auth_url` as the location of the Swift service. Note that this
-  will only work when used with the ViettelIdc Object Storage resources.
+  will only work when used with the VOpenCloud Object Storage resources.
 
 * `use_octavia` - (Optional) If set to `true`, API requests will go the Load Balancer
   service (Octavia) instead of the Networking service (Neutron).
@@ -169,20 +169,20 @@ The following arguments are supported:
   If omitted this header is added to all API requests to force HTTP caches (if any)
   to go upstream instead of serving cached responses.
 
-* `delayed_auth` - (Optional) If set to `false`, ViettelIdc authorization will be perfomed,
+* `delayed_auth` - (Optional) If set to `false`, VOpenCloud authorization will be perfomed,
   every time the service provider client is called. Defaults to `true`.
   If omitted, the `OS_DELAYED_AUTH` environment variable is checked.
 
-* `allow_reauth` - (Optional) If set to `false`, ViettelIdc authorization won't be
+* `allow_reauth` - (Optional) If set to `false`, VOpenCloud authorization won't be
   perfomed automatically, if the initial auth token get expired. Defaults to `true`.
   If omitted, the `OS_ALLOW_REAUTH` environment variable is checked.
 
-* `max_retries` - (Optional) If set to a value greater than 0, the ViettelIdc
+* `max_retries` - (Optional) If set to a value greater than 0, the VOpenCloud
   client will retry failed HTTP connections and Too Many Requests (429 code)
   HTTP responses with a `Retry-After` header within the specified value.
 
 * `enable_logging` - (Optional) When enabled, generates verbose logs containing
-  all the calls made to and responses received from ViettelIdc.
+  all the calls made to and responses received from VOpenCloud.
 
 ## Overriding Service API Endpoints
 
@@ -206,7 +206,7 @@ Note how each URL ends in a "/" and the `volumev2` service includes the
 tenant/project UUID. You must make sure you specify the full and complete
 endpoint URL for this to work.
 
-The service keys are the standard service entries used in the ViettelIdc
+The service keys are the standard service entries used in the VOpenCloud
 Identity/Keystone service catalog. This provider supports:
 
 * `compute`: Compute / Nova v2
@@ -229,7 +229,7 @@ to override an endpoint, you most likely do not need to override one.
 ## Additional Logging
 
 This provider has the ability to log all HTTP requests and responses between
-Terraform and the ViettelIdc cloud which is useful for troubleshooting and
+Terraform and the VOpenCloud cloud which is useful for troubleshooting and
 debugging.
 
 To enable these logs, set the `OS_DEBUG` environment variable to `1` along
@@ -242,14 +242,14 @@ $ OS_DEBUG=1 TF_LOG=DEBUG terraform apply
 If you submit these logs with a bug report, please ensure any sensitive
 information has been scrubbed first!
 
-## ViettelIdc Releases and Versions
+## VOpenCloud Releases and Versions
 
-This provider aims to support "vanilla" ViettelIdc. This means that we do all
-testing and development using the official upstream ViettelIdc code. If your
-ViettelIdc environment has patches or modifications, we do our best to
+This provider aims to support "vanilla" VOpenCloud. This means that we do all
+testing and development using the official upstream VOpenCloud code. If your
+VOpenCloud environment has patches or modifications, we do our best to
 accommodate these modifications, but we can't guarantee this.
 
-We try to support _all_ releases of ViettelIdc when we can. If your ViettelIdc
+We try to support _all_ releases of VOpenCloud when we can. If your VOpenCloud
 cloud is running an older release, we still should be able to support it.
 
 ### Octavia api versioning
@@ -270,7 +270,7 @@ curl -s -H "X-Auth-Token: $OS_TOKEN"  "https://example.com:9876/"
 
 ### Rackspace Compatibility
 
-Using this ViettelIdc provider with Rackspace is not supported and not
+Using this VOpenCloud provider with Rackspace is not supported and not
 guaranteed to work; however, users have reported success with the
 following notes in mind:
 
@@ -327,7 +327,7 @@ add any additional comments, please let us know.
 
 ## Testing and Development
 
-Thank you for your interest in further developing the ViettelIdc provider! Here
+Thank you for your interest in further developing the VOpenCloud provider! Here
 are a few notes which should help you get started. If you have any questions or
 feel these notes need further details, please open an Issue and let us know.
 
@@ -337,19 +337,19 @@ This provider aims to adhere to the coding style and practices used in the
 other major Terraform Providers. However, this is not a strict rule.
 
 We're very mindful that not everyone is a full-time developer (most of the
-ViettelIdc Provider contributors aren't!) and we're happy to provide
-guidance. Don't be afraid if this is your first contribution to the ViettelIdc
+VOpenCloud Provider contributors aren't!) and we're happy to provide
+guidance. Don't be afraid if this is your first contribution to the VOpenCloud
 provider or even your first contribution to an open source project!
 
 ### Testing Environment
 
 In order to start fixing bugs or adding features, you need access to an
-ViettelIdc environment. If it is safe to do, you can use a production ViettelIdc
+VOpenCloud environment. If it is safe to do, you can use a production VOpenCloud
 cloud which you have access to. However, it's usually safer to work in a
 development cloud.
 
 [DevStack](https://docs.openstack.org/devstack/latest/) is a quick and easy way
-to spin up an ViettelIdc cloud. All ViettelIdc services have DevStack plugins so
+to spin up an VOpenCloud cloud. All VOpenCloud services have DevStack plugins so
 you can build a DevStack environment to test everything from Nova/Compute to
 Designate/DNS.
 
@@ -359,19 +359,19 @@ document; however, we'll try to provide assistance where we can.
 ### Gophercloud
 
 This provider uses [Gophercloud](https://github.com/gophercloud/gophercloud)
-as the Go ViettelIdc SDK. All API interaction between this provider and an
-ViettelIdc cloud is done exclusively with Gophercloud.
+as the Go VOpenCloud SDK. All API interaction between this provider and an
+VOpenCloud cloud is done exclusively with Gophercloud.
 
 ### Adding a Feature
 
 If you'd like to add a new feature to this provider, it must first be supported
 in Gophercloud. If Gophercloud is missing the feature, then it'll first have to
 be added there before you can start working on the feature in Terraform.
-Fortunately, most of the regular ViettelIdc Provider contributors also work on
+Fortunately, most of the regular VOpenCloud Provider contributors also work on
 Gophercloud, so we can try to get the feature added quickly.
 
 If the feature is already included in Gophercloud, then you can begin work
-directly in the ViettelIdc provider.
+directly in the VOpenCloud provider.
 
 If you have any questions about whether Gophercloud currently supports a
 certain feature, please feel free to ask and we can verify for you.
@@ -383,7 +383,7 @@ Gophercloud bug. If this is the case, then we'll need to get the bug fixed in
 Gophercloud first.
 
 However, if the bug is with Terraform itself, then you can begin work directly
-in the ViettelIdc provider.
+in the VOpenCloud provider.
 
 Again, if you have any questions about whether the bug you're trying to fix is
 a Gophercloud but, please ask.
@@ -472,7 +472,7 @@ We recommend running tests with logging set to `DEBUG`:
 $ TF_LOG=DEBUG make testacc TEST=./vopencloud TESTARGS="-run=TestAccComputeV2Keypair_basic -count=1"
 ```
 
-And you can even enable ViettelIdc debugging to see the actual HTTP API requests:
+And you can even enable VOpenCloud debugging to see the actual HTTP API requests:
 
 ```shell
 $ TF_LOG=DEBUG OS_DEBUG=1 make testacc TEST=./vopencloud TESTARGS="-run=TestAccComputeV2Keypair_basic -count=1"
@@ -508,7 +508,7 @@ If there were any failures, check the provided logs.
 There are a few reasons for test failures:
 
 1. Your code changes worked in your environment but are not working in a
-  different ViettelIdc environment.
+  different VOpenCloud environment.
 
 2. Your code changes caused another test to fail.
 

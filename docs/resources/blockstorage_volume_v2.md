@@ -1,15 +1,15 @@
 ---
 subcategory: "Deprecated"
 layout: "openstack"
-page_title: "ViettelIdc: vopencloud_blockstorage_volume_v2"
+page_title: "VOpenCloud: vopencloud_blockstorage_volume_v2"
 sidebar_current: "docs-openstack-resource-blockstorage-volume-v2"
 description: |-
-  Manages a V2 volume resource within ViettelIdc.
+  Manages a V2 volume resource within VOpenCloud.
 ---
 
 # vopencloud\_blockstorage\_volume\_v2
 
-Manages a V2 volume resource within ViettelIdc.
+Manages a V2 volume resource within VOpenCloud.
 
 ## Example Usage
 
@@ -63,7 +63,7 @@ The following arguments are supported:
     Changing this creates a new volume.
 
 * `scheduler_hints` - (Optional) Provide the Cinder scheduler with hints on where
-    to instantiate a volume in the ViettelIdc cloud. The available hints are described below.
+    to instantiate a volume in the VOpenCloud cloud. The available hints are described below.
     
 The `scheduler_hints` block supports:
 

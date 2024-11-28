@@ -1,15 +1,15 @@
 ---
 subcategory: "Identity / Keystone"
 layout: "openstack"
-page_title: "ViettelIdc: vopencloud_identity_project_v3"
+page_title: "VOpenCloud: vopencloud_identity_project_v3"
 sidebar_current: "docs-openstack-datasource-identity-project-v3"
 description: |-
-  Get information on an ViettelIdc Project.
+  Get information on an VOpenCloud Project.
 ---
 
 # vopencloud\_identity\_project\_v3
 
-Use this data source to get the ID of an ViettelIdc project.
+Use this data source to get the ID of an VOpenCloud project.
 
 ## Example Usage
 

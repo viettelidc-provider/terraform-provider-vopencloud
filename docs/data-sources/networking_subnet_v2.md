@@ -1,15 +1,15 @@
 ---
 subcategory: "Networking / Neutron"
 layout: "openstack"
-page_title: "ViettelIdc: vopencloud_networking_subnet_v2"
+page_title: "VOpenCloud: vopencloud_networking_subnet_v2"
 sidebar_current: "docs-openstack-datasource-networking-subnet-v2"
 description: |-
-  Get information on an ViettelIdc Subnet.
+  Get information on an VOpenCloud Subnet.
 ---
 
 # vopencloud\_networking\_subnet\_v2
 
-Use this data source to get the ID of an available ViettelIdc subnet.
+Use this data source to get the ID of an available VOpenCloud subnet.
 
 ## Example Usage
 

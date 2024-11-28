@@ -1,15 +1,15 @@
 ---
 subcategory: "Networking / Neutron"
 layout: "openstack"
-page_title: "ViettelIdc: vopencloud_networking_qos_bandwidth_limit_rule_v2"
+page_title: "VOpenCloud: vopencloud_networking_qos_bandwidth_limit_rule_v2"
 sidebar_current: "docs-openstack-datasource-networking-qos-bandwidth-limit-rule-v2"
 description: |-
-  Get information on an ViettelIdc QoS Bandwidth limit rule.
+  Get information on an VOpenCloud QoS Bandwidth limit rule.
 ---
 
 # vopencloud\_networking\_qos\_bandwidth\_limit\_rule\_v2
 
-Use this data source to get the ID of an available ViettelIdc QoS bandwidth limit rule.
+Use this data source to get the ID of an available VOpenCloud QoS bandwidth limit rule.
 
 ## Example Usage
 

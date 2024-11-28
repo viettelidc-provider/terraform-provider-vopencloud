@@ -1,7 +1,7 @@
 ---
 subcategory: "Networking / Neutron"
 layout: "openstack"
-page_title: "ViettelIdc: vopencloud_networking_subnet_ids_v2"
+page_title: "VOpenCloud: vopencloud_networking_subnet_ids_v2"
 sidebar_current: "docs-openstack-datasource-networking-subnet-ids-v2"
 description: |-
   Provides a list of Openstack Subnet IDs.

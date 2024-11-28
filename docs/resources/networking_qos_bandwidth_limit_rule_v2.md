@@ -1,15 +1,15 @@
 ---
 subcategory: "Networking / Neutron"
 layout: "openstack"
-page_title: "ViettelIdc: vopencloud_networking_qos_bandwidth_limit_rule_v2"
+page_title: "VOpenCloud: vopencloud_networking_qos_bandwidth_limit_rule_v2"
 sidebar_current: "docs-openstack-resource-networking-qos-bandwidth-limit-rule-v2"
 description: |-
-  Manages a V2 Neutron QoS bandwidth limit rule resource within ViettelIdc.
+  Manages a V2 Neutron QoS bandwidth limit rule resource within VOpenCloud.
 ---
 
 # vopencloud\_networking\_qos\_bandwidth\_limit\_rule\_v2
 
-Manages a V2 Neutron QoS bandwidth limit rule resource within ViettelIdc.
+Manages a V2 Neutron QoS bandwidth limit rule resource within VOpenCloud.
 
 ## Example Usage
 

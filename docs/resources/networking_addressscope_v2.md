@@ -1,15 +1,15 @@
 ---
 subcategory: "Networking / Neutron"
 layout: "openstack"
-page_title: "ViettelIdc: vopencloud_networking_addressscope_v2"
+page_title: "VOpenCloud: vopencloud_networking_addressscope_v2"
 sidebar_current: "docs-openstack-resource-networking-addressscope-v2"
 description: |-
-  Manages a V2 Neutron addressscope resource within ViettelIdc.
+  Manages a V2 Neutron addressscope resource within VOpenCloud.
 ---
 
 # vopencloud\_networking\_addressscope\_v2
 
-Manages a V2 Neutron addressscope resource within ViettelIdc.
+Manages a V2 Neutron addressscope resource within VOpenCloud.
 
 ## Example Usage
 

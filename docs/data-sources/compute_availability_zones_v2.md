@@ -1,15 +1,15 @@
 ---
 subcategory: "Compute / Nova"
 layout: "openstack"
-page_title: "ViettelIdc: vopencloud_compute_availability_zones_v2"
+page_title: "VOpenCloud: vopencloud_compute_availability_zones_v2"
 sidebar_current: "docs-openstack-datasource-compute-availability-zones-v2"
 description: |-
-  Get a list of availability zones from ViettelIdc
+  Get a list of availability zones from VOpenCloud
 ---
 
 # vopencloud\_compute\_availability\_zones\_v2
 
-Use this data source to get a list of availability zones from ViettelIdc
+Use this data source to get a list of availability zones from VOpenCloud
 
 ## Example Usage
 

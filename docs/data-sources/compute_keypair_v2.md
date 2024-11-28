@@ -1,15 +1,15 @@
 ---
 subcategory: "Compute / Nova"
 layout: "openstack"
-page_title: "ViettelIdc: vopencloud_compute_keypair_v2"
+page_title: "VOpenCloud: vopencloud_compute_keypair_v2"
 sidebar_current: "docs-openstack-datasource-compute-keypair-v2"
 description: |-
-  Get information on an ViettelIdc Keypair.
+  Get information on an VOpenCloud Keypair.
 ---
 
 # vopencloud\_compute\_keypair\_v2
 
-Use this data source to get the ID and public key of an ViettelIdc keypair.
+Use this data source to get the ID and public key of an VOpenCloud keypair.
 
 ## Example Usage
 
@@ -28,7 +28,7 @@ data "vopencloud_compute_keypair_v2" "kp" {
 
 * `user_id` - (Optional) The user id of the owner of the key pair.
     This parameter can be specified only if the provider is configured to use 
-    the credentials of an ViettelIdc administrator.
+    the credentials of an VOpenCloud administrator.
 
 
 ## Attributes Reference

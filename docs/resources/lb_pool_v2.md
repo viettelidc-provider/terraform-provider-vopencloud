@@ -1,15 +1,15 @@
 ---
 subcategory: "Load Balancing as a Service / Octavia"
 layout: "openstack"
-page_title: "ViettelIdc: vopencloud_lb_pool_v2"
+page_title: "VOpenCloud: vopencloud_lb_pool_v2"
 sidebar_current: "docs-openstack-resource-lb-pool-v2"
 description: |-
-  Manages a V2 pool resource within ViettelIdc.
+  Manages a V2 pool resource within VOpenCloud.
 ---
 
 # vopencloud\_lb\_pool\_v2
 
-Manages a V2 pool resource within ViettelIdc.
+Manages a V2 pool resource within VOpenCloud.
 
 ~> **Note:** This resource has attributes that depend on octavia minor versions.
 Please ensure your Openstack cloud supports the required [minor version](../#octavia-api-versioning).

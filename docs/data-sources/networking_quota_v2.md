@@ -1,7 +1,7 @@
 ---
 subcategory: "Networking / Neutron"
 layout: "openstack"
-page_title: "ViettelIdc: vopencloud_networking_quota_v2"
+page_title: "VOpenCloud: vopencloud_networking_quota_v2"
 sidebar_current: "docs-openstack-datasource-networking-quota-v2"
 description: |-
   Get information on a NEtworking Quota of a project.
@@ -9,7 +9,7 @@ description: |-
 
 # vopencloud\_networking\_quota\_v2
 
-Use this data source to get the networking quota of an ViettelIdc project.
+Use this data source to get the networking quota of an VOpenCloud project.
 
 ## Example Usage
 

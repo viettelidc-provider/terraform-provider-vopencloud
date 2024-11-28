@@ -1,21 +1,21 @@
 ---
 subcategory: "Load Balancing as a Service / Octavia"
 layout: "openstack"
-page_title: "ViettelIdc: vopencloud_lb_quota_v2"
+page_title: "VOpenCloud: vopencloud_lb_quota_v2"
 sidebar_current: "docs-openstack-resource-lb-quota-v2"
 description: |-
-  Manages a V2 quota resource within ViettelIdc.
+  Manages a V2 quota resource within VOpenCloud.
 ---
 
 # vopencloud\_lb\_quota\_v2
 
-Manages a V2 load balancer quota resource within ViettelIdc.
+Manages a V2 load balancer quota resource within VOpenCloud.
 
 ~> **Note:** This usually requires admin privileges.
 
 ~> **Note:** This resource is only available for Octavia.
 
-~> **Note:** This resource has a no-op deletion so no actual actions will be done against the ViettelIdc
+~> **Note:** This resource has a no-op deletion so no actual actions will be done against the VOpenCloud
    API in case of delete call.
 
 ~> **Note:** This resource has all-in creation so all optional quota arguments that were not specified are

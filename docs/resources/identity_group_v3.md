@@ -1,17 +1,17 @@
 ---
 subcategory: "Identity / Keystone"
 layout: "openstack"
-page_title: "ViettelIdc: vopencloud_identity_group_v3"
+page_title: "VOpenCloud: vopencloud_identity_group_v3"
 sidebar_current: "docs-openstack-resource-identity-group-v3"
 description: |-
-  Manages a V3 group resource within ViettelIdc Keystone.
+  Manages a V3 group resource within VOpenCloud Keystone.
 ---
 
 # vopencloud\_identity\_group\_v3
 
-Manages a V3 group resource within ViettelIdc Keystone.
+Manages a V3 group resource within VOpenCloud Keystone.
 
-~> **Note:** You _must_ have admin privileges in your ViettelIdc cloud to use
+~> **Note:** You _must_ have admin privileges in your VOpenCloud cloud to use
 this resource.
 
 ## Example Usage

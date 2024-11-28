@@ -1,10 +1,10 @@
 ---
 subcategory: "Compute / Nova"
 layout: "openstack"
-page_title: "ViettelIdc: vopencloud_compute_instance_v2"
+page_title: "VOpenCloud: vopencloud_compute_instance_v2"
 sidebar_current: "docs-openstack-datasource-compute-instance-v2"
 description: |-
-  Get information on an ViettelIdc Instance
+  Get information on an VOpenCloud Instance
 ---
 
 # vopencloud\_compute\_instance\_v2

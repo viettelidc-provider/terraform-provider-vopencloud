@@ -1,15 +1,15 @@
 ---
 subcategory: "Networking / Neutron"
 layout: "openstack"
-page_title: "ViettelIdc: vopencloud_networking_router_interface_v2"
+page_title: "VOpenCloud: vopencloud_networking_router_interface_v2"
 sidebar_current: "docs-openstack-resource-networking-router-interface-v2"
 description: |-
-  Manages a V2 router interface resource within ViettelIdc.
+  Manages a V2 router interface resource within VOpenCloud.
 ---
 
 # vopencloud\_networking\_router\_interface\_v2
 
-Manages a V2 router interface resource within ViettelIdc.
+Manages a V2 router interface resource within VOpenCloud.
 
 ## Example Usage
 

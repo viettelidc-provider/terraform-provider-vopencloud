@@ -1,19 +1,19 @@
 ---
 subcategory: "Compute / Nova"
 layout: "openstack"
-page_title: "ViettelIdc: vopencloud_compute_quotaset_v2"
+page_title: "VOpenCloud: vopencloud_compute_quotaset_v2"
 sidebar_current: "docs-openstack-resource-compute-quotaset-v2"
 description: |-
-  Manages a V2 compute quotaset resource within ViettelIdc.
+  Manages a V2 compute quotaset resource within VOpenCloud.
 ---
 
 # vopencloud\_compute\_quotaset\_v2
 
-Manages a V2 compute quotaset resource within ViettelIdc.
+Manages a V2 compute quotaset resource within VOpenCloud.
 
 ~> **Note:** This usually requires admin privileges.
 
-~> **Note:** This resource has a no-op deletion so no actual actions will be done against the ViettelIdc API
+~> **Note:** This resource has a no-op deletion so no actual actions will be done against the VOpenCloud API
     in case of delete call.
 
 ~> **Note:** This resource has all-in creation so all optional quota arguments that were not specified are
