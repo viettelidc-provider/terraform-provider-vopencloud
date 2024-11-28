@@ -1,17 +1,17 @@
 ---
 subcategory: "Identity / Keystone"
 layout: "openstack"
-page_title: "ViettelIdc: vopencloud_identity_group_v3"
+page_title: "VOpenCloud: vopencloud_identity_group_v3"
 sidebar_current: "docs-openstack-datasource-identity-group-v3"
 description: |-
-  Get information on an ViettelIdc Group.
+  Get information on an VOpenCloud Group.
 ---
 
 # vopencloud\_identity\_group\_v3
 
-Use this data source to get the ID of an ViettelIdc group.
+Use this data source to get the ID of an VOpenCloud group.
 
-~> **Note:** You _must_ have admin privileges in your ViettelIdc cloud to use
+~> **Note:** You _must_ have admin privileges in your VOpenCloud cloud to use
 this resource.
 
 ## Example Usage

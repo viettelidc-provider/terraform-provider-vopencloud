@@ -1,21 +1,21 @@
 ---
 subcategory: "Identity / Keystone"
 layout: "openstack"
-page_title: "ViettelIdc: vopencloud_identity_user_v3"
+page_title: "VOpenCloud: vopencloud_identity_user_v3"
 sidebar_current: "docs-openstack-resource-identity-user-v3"
 description: |-
-  Manages a V3 User resource within ViettelIdc Keystone.
+  Manages a V3 User resource within VOpenCloud Keystone.
 ---
 
 # vopencloud\_identity\_user\_v3
 
-Manages a V3 User resource within ViettelIdc Keystone.
+Manages a V3 User resource within VOpenCloud Keystone.
 
 ~> **Note:** All arguments including the user password will be stored in the
 raw state as plain-text. [Read more about sensitive data in
 state](https://www.terraform.io/docs/language/state/sensitive-data.html).
 
-~> **Note:** You _must_ have admin privileges in your ViettelIdc cloud to use
+~> **Note:** You _must_ have admin privileges in your VOpenCloud cloud to use
 this resource.
 
 ## Example Usage

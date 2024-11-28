@@ -1,7 +1,7 @@
 ---
 subcategory: "Deprecated"
 layout: "openstack"
-page_title: "ViettelIdc: vopencloud_blockstorage_volume_attach_v2"
+page_title: "VOpenCloud: vopencloud_blockstorage_volume_attach_v2"
 sidebar_current: "docs-openstack-resource-blockstorage-volume-attach-v2"
 description: |-
   Creates an attachment connection to a Block Storage volume
@@ -19,7 +19,7 @@ stored in the raw state as plain-text. [Read more about sensitive data in
 state](https://www.terraform.io/docs/language/state/sensitive-data.html).
 
 Creates a general purpose attachment connection to a Block
-Storage volume using the ViettelIdc Block Storage (Cinder) v2 API.
+Storage volume using the VOpenCloud Block Storage (Cinder) v2 API.
 
 Depending on your Block Storage service configuration, this
 resource can assist in attaching a volume to a non-vopencloud resource
@@ -127,7 +127,7 @@ iscsiadm -m node -T ${self.data.target_iqn} -p ${self.data.target_portal} --resc
 The contents of `data` will vary from each Block Storage service. You must have
 a good understanding of how the service is configured and how to make the
 appropriate final connection. However, if used correctly, this has the
-flexibility to be able to attach ViettelIdc Block Storage volumes to
+flexibility to be able to attach VOpenCloud Block Storage volumes to
 non-vopencloud resources.
 
 ## Import

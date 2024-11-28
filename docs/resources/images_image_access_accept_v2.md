@@ -1,15 +1,15 @@
 ---
 subcategory: "Images / Glance"
 layout: "openstack"
-page_title: "ViettelIdc: vopencloud_images_image_access_accept_v2"
+page_title: "VOpenCloud: vopencloud_images_image_access_accept_v2"
 sidebar_current: "docs-openstack-resource-images-image-access-accept-v2"
 description: |-
-  Manages a V2 Image membership proposal resource within ViettelIdc Glance.
+  Manages a V2 Image membership proposal resource within VOpenCloud Glance.
 ---
 
 # vopencloud\_images\_image\_access\_accept\_v2
 
-Manages memberships status for the shared ViettelIdc Glance V2 Image within the
+Manages memberships status for the shared VOpenCloud Glance V2 Image within the
 destination project, which has a member proposal.
 
 ## Example Usage

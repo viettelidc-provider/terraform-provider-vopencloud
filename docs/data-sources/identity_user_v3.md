@@ -1,15 +1,15 @@
 ---
 subcategory: "Identity / Keystone"
 layout: "openstack"
-page_title: "ViettelIdc: vopencloud_identity_user_v3"
+page_title: "VOpenCloud: vopencloud_identity_user_v3"
 sidebar_current: "docs-openstack-datasource-identity-user-v3"
 description: |-
-  Get information on an ViettelIdc User.
+  Get information on an VOpenCloud User.
 ---
 
 # vopencloud\_identity\_user\_v3
 
-Use this data source to get the ID of an ViettelIdc user.
+Use this data source to get the ID of an VOpenCloud user.
 
 ## Example Usage
 
@@ -34,7 +34,7 @@ The following arguments are supported:
 
 * `name` - (Optional) The name of the user.
 
-* `password_expires_at` - (Optional) Query for expired passwords. See the [ViettelIdc API docs](https://developer.openstack.org/api-ref/identity/v3/#list-users) for more information on the query format.
+* `password_expires_at` - (Optional) Query for expired passwords. See the [VOpenCloud API docs](https://developer.openstack.org/api-ref/identity/v3/#list-users) for more information on the query format.
 
 * `protocol_id` - (Optional) The protocol ID of the user.
 

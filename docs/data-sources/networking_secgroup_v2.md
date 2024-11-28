@@ -1,15 +1,15 @@
 ---
 subcategory: "Networking / Neutron"
 layout: "openstack"
-page_title: "ViettelIdc: vopencloud_networking_secgroup_v2"
+page_title: "VOpenCloud: vopencloud_networking_secgroup_v2"
 sidebar_current: "docs-openstack-datasource-networking-secgroup-v2"
 description: |-
-  Get information on an ViettelIdc Security Group.
+  Get information on an VOpenCloud Security Group.
 ---
 
 # vopencloud\_networking\_secgroup\_v2
 
-Use this data source to get the ID of an available ViettelIdc security group.
+Use this data source to get the ID of an available VOpenCloud security group.
 
 ## Example Usage
 

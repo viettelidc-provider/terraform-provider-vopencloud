@@ -290,7 +290,7 @@ IMPROVEMENTS
 
 BUG FIXES
 
-* Fixed Bad request API error while updating `images_image_v2` resource because old ViettelIdc released don't have `hidden` argument ([#1209](https://github.com/viettelcloud-provider/terraform-provider-vopencloud/pull/1209))
+* Fixed Bad request API error while updating `images_image_v2` resource because old VOpenCloud released don't have `hidden` argument ([#1209](https://github.com/viettelcloud-provider/terraform-provider-vopencloud/pull/1209))
 * Fixed Bad request API error while updating `blockstorage_quotaset_v2`, `blockstorage_quotaset_v3` ([#1200](https://github.com/viettelcloud-provider/terraform-provider-vopencloud/pull/1200))
 
 ## 1.39.0 (6 March, 2021)
@@ -479,7 +479,7 @@ BUG FIXES
 
 NOTES
 
-* This release sets `delayed_auth` and `allow_reauth` to `true` so Terraform provider won't request a new Identity token for every request against ViettelIdc API. We're happy to see you feedback about this change in our provider repo.
+* This release sets `delayed_auth` and `allow_reauth` to `true` so Terraform provider won't request a new Identity token for every request against VOpenCloud API. We're happy to see you feedback about this change in our provider repo.
 
 IMPROVEMENTS
 
@@ -496,7 +496,7 @@ IMPROVEMENTS
 
 BUG FIXES
 
-* Fixed race conditions for `networking_secgroup_rule_v2` resource on some ViettelIdc environments ([#994](https://github.com/viettelcloud-provider/terraform-provider-vopencloud/issues/994))
+* Fixed race conditions for `networking_secgroup_rule_v2` resource on some VOpenCloud environments ([#994](https://github.com/viettelcloud-provider/terraform-provider-vopencloud/issues/994))
 * Fixed error logs for `keymanager_secret_v1` resource ([#997](https://github.com/viettelcloud-provider/terraform-provider-vopencloud/issues/997))
 
 ## 1.27.0 (April 13, 2020)
@@ -532,7 +532,7 @@ BUG FIXES
 
 NOTES
 
-* This release drops Ubuntu Trusty and ViettelIdc Mitaka from testing CI environment.
+* This release drops Ubuntu Trusty and VOpenCloud Mitaka from testing CI environment.
 
 ## 1.25.0 (December 25, 2019)
 
@@ -602,8 +602,8 @@ IMPROVEMENTS
 BUG FIXES
 
 * Fixed the bug where `vopencloud_identity_auth_scope_v3` caused a panic within the domain-scope ([#851](https://github.com/viettelcloud-provider/terraform-provider-vopencloud/issues/851))
-* Fixed the bug where `vopencloud_compute_flavor_access_v2` resource wasn't removed from the Terraform state when it has been deleted in the ViettelIdc ([#856](https://github.com/viettelcloud-provider/terraform-provider-vopencloud/issues/856))
-* Fixed the bug where `vopencloud_identity_role_assignment_v3` resource wasn't removed from the Terraform state when it has been deleted in the ViettelIdc ([#856](https://github.com/viettelcloud-provider/terraform-provider-vopencloud/issues/856))
+* Fixed the bug where `vopencloud_compute_flavor_access_v2` resource wasn't removed from the Terraform state when it has been deleted in the VOpenCloud ([#856](https://github.com/viettelcloud-provider/terraform-provider-vopencloud/issues/856))
+* Fixed the bug where `vopencloud_identity_role_assignment_v3` resource wasn't removed from the Terraform state when it has been deleted in the VOpenCloud ([#856](https://github.com/viettelcloud-provider/terraform-provider-vopencloud/issues/856))
 * Fixed the bug where `ephemeral` argument wasn't set for `vopencloud_compute_flavor_v2` while reading this resource from the API ([#855](https://github.com/viettelcloud-provider/terraform-provider-vopencloud/issues/855))
 
 ## 1.22.0 (September 05, 2019)
@@ -628,7 +628,7 @@ BUG FIXES
 
 BUG FIXES
 
-* Fixed the bug where ViettelIdc Networking V2 resources and data sources didn't work in old ViettelIdc environments because of different time format used for `created_at` and `updated_at` fields ([#831](https://github.com/viettelcloud-provider/terraform-provider-vopencloud/issues/831))
+* Fixed the bug where VOpenCloud Networking V2 resources and data sources didn't work in old VOpenCloud environments because of different time format used for `created_at` and `updated_at` fields ([#831](https://github.com/viettelcloud-provider/terraform-provider-vopencloud/issues/831))
 
 ## 1.21.0 (August 06, 2019)
 
@@ -800,7 +800,7 @@ IMPROVEMENTS
 * Added support to authenticate with Application Credentials ([#642](https://github.com/viettelcloud-provider/terraform-provider-vopencloud/issues/642))
 * Added ability to specify region in `vopencloud_sharedfilesystem_share_access_v2` ([#654](https://github.com/viettelcloud-provider/terraform-provider-vopencloud/issues/654))
 * Added ability to specify region in `vopencloud_sharedfilesystem_share_v2` ([#654](https://github.com/viettelcloud-provider/terraform-provider-vopencloud/issues/654))
-* Added `all_tags` attribute to Networking resources to set tags provided by the ViettelIdc backend automatically ([#623](https://github.com/viettelcloud-provider/terraform-provider-vopencloud/issues/623))
+* Added `all_tags` attribute to Networking resources to set tags provided by the VOpenCloud backend automatically ([#623](https://github.com/viettelcloud-provider/terraform-provider-vopencloud/issues/623))
 
 BUG FIXES
 
@@ -826,7 +826,7 @@ BUG FIXES
 NOTES
 
 * The Load Balancer v2 resources have been updated to provide more efficient status checks. If you encounter any problems due to this, please report them and we will make it a priority to resolve.
-* `vopencloud_networking_port_v2` will now set the `admin_state_up` to `true/UP` if it is left omitted from the resource configuration. This now correctly conforms to the ViettelIdc API. This should be a transparent change, but let us know if this causes you problems.
+* `vopencloud_networking_port_v2` will now set the `admin_state_up` to `true/UP` if it is left omitted from the resource configuration. This now correctly conforms to the VOpenCloud API. This should be a transparent change, but let us know if this causes you problems.
 
 FEATURES
 
@@ -936,7 +936,7 @@ IMPROVEMENTS
 BUG FIXES
 
 * Fixed an issue where environment variables were overwriting specified arguments ([#436](https://github.com/viettelcloud-provider/terraform-provider-vopencloud/issues/436))
-* Fixed an issue where security group rule descriptions were not working with older verisons of ViettelIdc ([#438](https://github.com/viettelcloud-provider/terraform-provider-vopencloud/issues/438))
+* Fixed an issue where security group rule descriptions were not working with older verisons of VOpenCloud ([#438](https://github.com/viettelcloud-provider/terraform-provider-vopencloud/issues/438))
 
 ## 1.10.0 (October 01, 2018)
 
@@ -984,7 +984,7 @@ FEATURES
 IMPROVEMENTS
 
 * Added support for `default_domain` during authentication ([#329](https://github.com/viettelcloud-provider/terraform-provider-vopencloud/issues/329))
-* The upcoming ViettelIdc Rocky release will be automatically adding additional properties to the `vopencloud_images_image_v2` resource. This resource has been patched to account for this and to reconcile these server-provided properties with the user-provided properties. In addition, `vopencloud_images_image_v2.properties` has been set to `ForceNew` and will recreate the image when properties have been modified. Previously, any updates to the properties were only happening in the state and not actually reflected on the image itself. ([#390](https://github.com/viettelcloud-provider/terraform-provider-vopencloud/issues/390))
+* The upcoming VOpenCloud Rocky release will be automatically adding additional properties to the `vopencloud_images_image_v2` resource. This resource has been patched to account for this and to reconcile these server-provided properties with the user-provided properties. In addition, `vopencloud_images_image_v2.properties` has been set to `ForceNew` and will recreate the image when properties have been modified. Previously, any updates to the properties were only happening in the state and not actually reflected on the image itself. ([#390](https://github.com/viettelcloud-provider/terraform-provider-vopencloud/issues/390))
 
 BUG FIXES
 
@@ -1054,7 +1054,7 @@ BUG FIXES
 
 BACKWARDS INCOMPATIBILITIES / NOTES:
 
-* The ViettelIdc provider now has additional authentication options for `project_domain_name`, `project_domain_id`, `user_domain_name`, and `user_domain_id`. This will allow for more fine-grainted authentication scoping. This should not cause any problems with existing deployments, but please report any authentication issues after upgrading.
+* The VOpenCloud provider now has additional authentication options for `project_domain_name`, `project_domain_id`, `user_domain_name`, and `user_domain_id`. This will allow for more fine-grainted authentication scoping. This should not cause any problems with existing deployments, but please report any authentication issues after upgrading.
 
 FEATURES
 
@@ -1160,7 +1160,7 @@ BUG FIXES
 
 BACKWARDS INCOMPATIBILITIES / NOTES:
 
-* If your ViettelIdc cloud supports the Octavia Load Balancing service, you can now use it by setting the provider-level `use_octavia` argument to `true`. The `vopencloud_lb_*_v2` resources will then seamlessly use Octavia.
+* If your VOpenCloud cloud supports the Octavia Load Balancing service, you can now use it by setting the provider-level `use_octavia` argument to `true`. The `vopencloud_lb_*_v2` resources will then seamlessly use Octavia.
 
 FEATURES
 
@@ -1176,7 +1176,7 @@ IMPROVEMENTS
 
 BACKWARDS INCOMPATIBILITIES / NOTES:
 
-* The `vopencloud_networking_port_v2` resource had a significant update to how it handles security groups. If you have not explicitly defined security groups in the port resource, any security groups which were automatically applied by ViettelIdc (such as the `default` security group) will be removed upon the next apply. To prevent this from happening, add the ID of the security groups to the `security_group_ids` argument. If you are already explicitly specifying security groups, you should see no change in behavior.
+* The `vopencloud_networking_port_v2` resource had a significant update to how it handles security groups. If you have not explicitly defined security groups in the port resource, any security groups which were automatically applied by VOpenCloud (such as the `default` security group) will be removed upon the next apply. To prevent this from happening, add the ID of the security groups to the `security_group_ids` argument. If you are already explicitly specifying security groups, you should see no change in behavior.
 
 IMPROVEMENTS
 

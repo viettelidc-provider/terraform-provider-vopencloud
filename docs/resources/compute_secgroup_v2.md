@@ -1,21 +1,21 @@
 ---
 subcategory: "Compute / Nova"
 layout: "openstack"
-page_title: "ViettelIdc: vopencloud_compute_secgroup_v2"
+page_title: "VOpenCloud: vopencloud_compute_secgroup_v2"
 sidebar_current: "docs-openstack-resource-compute-secgroup-v2"
 description: |-
-  Manages a V2 security group resource within ViettelIdc.
+  Manages a V2 security group resource within VOpenCloud.
 ---
 
 # vopencloud\_compute\_secgroup\_v2
 
-Manages a V2 security group resource within ViettelIdc.
+Manages a V2 security group resource within VOpenCloud.
 
-Please note that managing security groups through the ViettelIdc Compute API
-has been deprecated. Unless you are using an older ViettelIdc environment, it is
+Please note that managing security groups through the VOpenCloud Compute API
+has been deprecated. Unless you are using an older VOpenCloud environment, it is
 recommended to use the [`vopencloud_networking_secgroup_v2`](networking_secgroup_v2.html)
 and [`vopencloud_networking_secgroup_rule_v2`](networking_secgroup_rule_v2.html)
-resources instead, which uses the ViettelIdc Networking API.
+resources instead, which uses the VOpenCloud Networking API.
 
 ## Example Usage
 

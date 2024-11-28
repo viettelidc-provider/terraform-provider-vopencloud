@@ -1,4 +1,4 @@
-Terraform ViettelIdc Provider
+Terraform VOpenCloud Provider
 ============================
 
 Documentation: [registry.terraform.io](https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs)
@@ -71,7 +71,7 @@ We'd like to extend special thanks and appreciation to the following:
 
 <a href="http://openlabtesting.org/"><img src="assets/openlab.png" width="600px"></a>
 
-OpenLab is providing a full CI environment to test each PR and merge for a variety of ViettelIdc releases.
+OpenLab is providing a full CI environment to test each PR and merge for a variety of VOpenCloud releases.
 
 ### VEXXHOST
 

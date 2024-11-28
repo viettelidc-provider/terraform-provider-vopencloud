@@ -1,15 +1,15 @@
 ---
 subcategory: "Images / Glance"
 layout: "openstack"
-page_title: "ViettelIdc: vopencloud_images_image_v2"
+page_title: "VOpenCloud: vopencloud_images_image_v2"
 sidebar_current: "docs-openstack-datasource-images-image-v2"
 description: |-
-  Get information on an ViettelIdc Image.
+  Get information on an VOpenCloud Image.
 ---
 
 # vopencloud\_images\_image\_v2
 
-Use this data source to get the ID of an available ViettelIdc image.
+Use this data source to get the ID of an available VOpenCloud image.
 
 ## Example Usage
 
@@ -39,14 +39,14 @@ data "vopencloud_images_image_v2" "ubuntu" {
 
 * `name_regex` - (Optional) The regular expressian of the name of the image.
     Cannot be used simultaneously with `name`. Unlike filtering by `name` the
-    `name_regex` filtering does by client on the result of ViettelIdc search
+    `name_regex` filtering does by client on the result of VOpenCloud search
     query.
 
 * `owner` - (Optional) The owner (UUID) of the image.
 
 * `properties` - (Optional) a map of key/value pairs to match an image with.
     All specified properties must be matched. Unlike other options filtering
-    by `properties` does by client on the result of ViettelIdc search query.
+    by `properties` does by client on the result of VOpenCloud search query.
     Filtering is applied if server responce contains at least 2 images. In
     case there is only one image the `properties` ignores.
 

@@ -1,10 +1,10 @@
 ---
 subcategory: "Networking / Neutron"
 layout: "openstack"
-page_title: "ViettelIdc: vopencloud_networking_rbac_policy_v2"
+page_title: "VOpenCloud: vopencloud_networking_rbac_policy_v2"
 sidebar_current: "docs-openstack-resource-networking-rbac-policy-v2"
 description: |-
-  Creates an RBAC policy for an ViettelIdc V2 resource.
+  Creates an RBAC policy for an VOpenCloud V2 resource.
 ---
 
 # vopencloud\_networking\_rbac\_policy\_v2

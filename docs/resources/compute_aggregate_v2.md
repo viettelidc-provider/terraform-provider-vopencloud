@@ -1,7 +1,7 @@
 ---
 subcategory: "Compute / Nova"
 layout: "openstack"
-page_title: "ViettelIdc: vopencloud_compute_aggregate_v2"
+page_title: "VOpenCloud: vopencloud_compute_aggregate_v2"
 sidebar_current: "docs-openstack-resource-compute-aggregate-v2"
 description: |-
   Manages a Host Aggregate within Openstack Nova

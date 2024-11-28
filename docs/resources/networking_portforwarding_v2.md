@@ -1,15 +1,15 @@
 ---
 subcategory: "Networking / Neutron"
 layout: "openstack"
-page_title: "ViettelIdc: vopencloud_networking_portforwarding_v2"
+page_title: "VOpenCloud: vopencloud_networking_portforwarding_v2"
 sidebar_current: "docs-openstack-resource-networking-portforwarding-v2"
 description: |-
-  Manages a V2 port forwarding resource within ViettelIdc.
+  Manages a V2 port forwarding resource within VOpenCloud.
 ---
 
 # vopencloud\_networking\_portforwarding_v2
 
-Manages a V2 portforwarding resource within ViettelIdc.
+Manages a V2 portforwarding resource within VOpenCloud.
 
 ## Example Usage
 

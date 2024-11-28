@@ -1,15 +1,15 @@
 ---
 subcategory: "Load Balancing as a Service / Octavia"
 layout: "openstack"
-page_title: "ViettelIdc: vopencloud_lb_member_v2"
+page_title: "VOpenCloud: vopencloud_lb_member_v2"
 sidebar_current: "docs-openstack-resource-lb-member-v2"
 description: |-
-  Manages a V2 member resource within ViettelIdc.
+  Manages a V2 member resource within VOpenCloud.
 ---
 
 # vopencloud\_lb\_member\_v2
 
-Manages a V2 member resource within ViettelIdc.
+Manages a V2 member resource within VOpenCloud.
 
 ## Example Usage
 

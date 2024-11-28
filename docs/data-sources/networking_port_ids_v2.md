@@ -1,7 +1,7 @@
 ---
 subcategory: "Networking / Neutron"
 layout: "openstack"
-page_title: "ViettelIdc: vopencloud_networking_port_ids_v2"
+page_title: "VOpenCloud: vopencloud_networking_port_ids_v2"
 sidebar_current: "docs-openstack-datasource-networking-port-ids-v2"
 description: |-
   Provides a list of Openstack Port IDs.

@@ -1,15 +1,15 @@
 ---
 subcategory: "Databases / Trove"
 layout: "openstack"
-page_title: "ViettelIdc: vopencloud_db_database_v1"
+page_title: "VOpenCloud: vopencloud_db_database_v1"
 sidebar_current: "docs-openstack-resource-db-database-v1"
 description: |-
-  Manages a V1 database resource within ViettelIdc.
+  Manages a V1 database resource within VOpenCloud.
 ---
 
 # vopencloud\_db\_database\_v1
 
-Manages a V1 DB database resource within ViettelIdc.
+Manages a V1 DB database resource within VOpenCloud.
 
 ## Example Usage
 

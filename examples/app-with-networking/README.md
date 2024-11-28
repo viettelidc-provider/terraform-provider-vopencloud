@@ -1,6 +1,6 @@
-# Basic ViettelIdc architecture with networking
+# Basic VOpenCloud architecture with networking
 
-This provides a template for running a simple architecture on an ViettelIdc
+This provides a template for running a simple architecture on an VOpenCloud
 cloud.
 
 To simplify the example, this intentionally ignores deploying and
@@ -13,7 +13,7 @@ After you run `terraform apply` on this configuration, it will output the
 floating IP address assigned to the instance. After your instance started,
 this should respond with the default nginx web page.
 
-First set the required environment variables for the ViettelIdc provider by
+First set the required environment variables for the VOpenCloud provider by
 sourcing the [credentials file](http://docs.openstack.org/cli-reference/content/cli_openrc.html).
 
 ```

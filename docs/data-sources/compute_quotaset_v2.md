@@ -1,7 +1,7 @@
 ---
 subcategory: "Compute / Nova"
 layout: "openstack"
-page_title: "ViettelIdc: vopencloud_compute_quotaset_v2"
+page_title: "VOpenCloud: vopencloud_compute_quotaset_v2"
 sidebar_current: "docs-openstack-datasource-compute-quotaset-v2"
 description: |-
   Get information on a Compute Quotaset of a project.
@@ -9,7 +9,7 @@ description: |-
 
 # vopencloud\_compute\_quotaset\_v2
 
-Use this data source to get the compute quotaset of an ViettelIdc project.
+Use this data source to get the compute quotaset of an VOpenCloud project.
 
 ## Example Usage
 

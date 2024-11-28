@@ -1,15 +1,15 @@
 ---
 subcategory: "Databases / Trove"
 layout: "openstack"
-page_title: "ViettelIdc: vopencloud_db_instance_v1"
+page_title: "VOpenCloud: vopencloud_db_instance_v1"
 sidebar_current: "docs-openstack-resource-db-instance-v1"
 description: |-
-  Manages a V1 DB instance resource within ViettelIdc.
+  Manages a V1 DB instance resource within VOpenCloud.
 ---
 
 # vopencloud\_db\_instance\_v1
 
-Manages a V1 DB instance resource within ViettelIdc.
+Manages a V1 DB instance resource within VOpenCloud.
 
 ~> **Note:** All arguments including the instance user password will be stored
 in the raw state as plain-text. [Read more about sensitive data in

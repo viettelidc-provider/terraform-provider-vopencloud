@@ -1,15 +1,15 @@
 ---
 subcategory: "Block Storage / Cinder"
 layout: "openstack"
-page_title: "ViettelIdc: vopencloud_blockstorage_volume_type_v3"
+page_title: "VOpenCloud: vopencloud_blockstorage_volume_type_v3"
 sidebar_current: "docs-openstack-resource-blockstorage-volume-type-v3"
 description: |-
-  Manages a V3 volume type resource within ViettelIdc.
+  Manages a V3 volume type resource within VOpenCloud.
 ---
 
 # vopencloud\_blockstorage\_volume\_type\_v3
 
-Manages a V3 block storage volume type resource within ViettelIdc.
+Manages a V3 block storage volume type resource within VOpenCloud.
 
 ~> **Note:** This usually requires admin privileges.
 

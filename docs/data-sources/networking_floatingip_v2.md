@@ -1,15 +1,15 @@
 ---
 subcategory: "Networking / Neutron"
 layout: "openstack"
-page_title: "ViettelIdc: vopencloud_networking_floatingip_v2"
+page_title: "VOpenCloud: vopencloud_networking_floatingip_v2"
 sidebar_current: "docs-openstack-datasource-networking-floatingip-v2"
 description: |-
-  Get information on an ViettelIdc Floating IP.
+  Get information on an VOpenCloud Floating IP.
 ---
 
 # vopencloud\_networking\_floatingip\_v2
 
-Use this data source to get the ID of an available ViettelIdc floating IP.
+Use this data source to get the ID of an available VOpenCloud floating IP.
 
 ## Example Usage
 

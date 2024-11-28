@@ -1,15 +1,15 @@
 ---
 subcategory: "Identity / Keystone"
 layout: "openstack"
-page_title: "ViettelIdc: vopencloud_identity_endpoint_v3"
+page_title: "VOpenCloud: vopencloud_identity_endpoint_v3"
 sidebar_current: "docs-openstack-datasource-identity-endpoint-v3"
 description: |-
-  Get information on an ViettelIdc Endpoint.
+  Get information on an VOpenCloud Endpoint.
 ---
 
 # vopencloud\_identity\_endpoint\_v3
 
-Use this data source to get the ID of an ViettelIdc endpoint.
+Use this data source to get the ID of an VOpenCloud endpoint.
 
 ~> **Note:** This usually requires admin privileges.
 

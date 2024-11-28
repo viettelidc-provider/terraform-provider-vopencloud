@@ -1,15 +1,15 @@
 ---
 subcategory: "Networking / Neutron"
 layout: "openstack"
-page_title: "ViettelIdc: vopencloud_networking_port_v2"
+page_title: "VOpenCloud: vopencloud_networking_port_v2"
 sidebar_current: "docs-openstack-resource-networking-port-v2"
 description: |-
-  Manages a V2 port resource within ViettelIdc.
+  Manages a V2 port resource within VOpenCloud.
 ---
 
 # vopencloud\_networking\_port\_v2
 
-Manages a V2 port resource within ViettelIdc.
+Manages a V2 port resource within VOpenCloud.
 
 ~> **Note:** Ports do not get an IP if the network they are attached
 to does not have a subnet. If you create the subnet resource in the

@@ -13,11 +13,11 @@ sudo mv terraform /usr/local/bin/
 terraform --version
 ```
 
-Log in to the ViettelIdc dashboard, choose the project for which you want to download the ViettelIdc RC file, and run the following commands:
+Log in to the VOpenCloud dashboard, choose the project for which you want to download the VOpenCloud RC file, and run the following commands:
 
 ```sh
 source ~/Downloads/PROJECT-openrc.sh
-Please enter your ViettelIdc Password for project PROJECT as user username:
+Please enter your VOpenCloud Password for project PROJECT as user username:
 ```
 
 ### Initialize providers
